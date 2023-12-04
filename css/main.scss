@@ -87,7 +87,7 @@ html{
   color: #000;
   outline: none;
   border-radius: 3rem;
-  border: 0;
+  border: 0; 
   box-shadow: 5px 5px 20px black;
   transition: .2s all ease;
   overflow: hidden;
@@ -112,6 +112,7 @@ html{
 /* ==============main====================== */
 main{
     font-size: 3rem;
+    position: relative;
   }
 /* skills==================================== */
 @import "skill.scss";
@@ -132,3 +133,6 @@ main{
 /* 
 /* ==============responsive====================== */
 @import "responsive.scss";
+/* ==============responsive====================== */
+
+// @import "parallax.scss";

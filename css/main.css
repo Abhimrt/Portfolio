@@ -243,13 +243,15 @@ header {
   position: relative;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
 .header-bc {
   width: 110vw;
-  height: 100vh;
-  background: linear-gradient(transparent 80%, black), url("../images/header-bc.webp") fixed center center;
-  background-size: 100% 100%;
+  height: 101vh;
+  background-color: rgb(0, 1, 3);
+  background: linear-gradient(transparent 80%, black), url("../images/header-bc.webp") center center;
+  background-size: 100% 110%;
   filter: blur(1px);
 }
 
@@ -296,7 +298,7 @@ header {
   margin: 12px;
   margin-left: 50px;
   width: 8rem;
-  height: 8rem;
+  aspect-ratio: 1;
   border-radius: 1rem;
   background-color: #fff;
   font-size: 4rem;
@@ -393,12 +395,12 @@ header {
 .header-text h1 {
   font-size: 12rem;
   letter-spacing: 1rem;
-  color: var(--shade4);
+  color: var(--text1);
   font-family: "Vujahday Script", cursive;
   overflow: hidden;
   text-align: center;
   font-weight: 900;
-  text-shadow: 6px 6px 10px rgba(255, 255, 255, 0.8);
+  text-shadow: 6px 6px 6px rgba(45, 45, 45, 0.8);
   padding: 2rem;
 }
 
@@ -406,10 +408,10 @@ header {
   font-size: 6rem;
   text-align: left;
   letter-spacing: 1rem;
-  color: var(--shade4);
+  color: var(--text1);
   font-family: "Vujahday Script", cursive;
   overflow: hidden;
-  text-shadow: 5px 5px 7px rgba(255, 255, 255, 0.8);
+  text-shadow: 5px 5px 5px rgba(56, 56, 56, 0.8);
 }
 
 #passion {
@@ -419,6 +421,7 @@ header {
 /* ==============main====================== */
 main {
   font-size: 3rem;
+  position: relative;
 }
 
 /* skills==================================== */
@@ -426,10 +429,21 @@ main {
   width: 100vw;
   height: 100vh;
   position: relative;
-  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(253, 253, 253, 0.5)), url(../images/coding.webp) fixed center center;
-  background-size: cover;
-  -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
+  background-color: rgb(1, 7, 30);
+  background: linear-gradient(rgb(1, 7, 30) 5%, black);
+}
+
+.circle_skill {
+  position: absolute;
+  top: 35vh;
+  right: 0;
+  width: 25%;
+  aspect-ratio: 1/2;
+  border-radius: 50% 0 0 50%;
+  background-image: url(../images/skills_bc.gif);
+  background-position: 30% 30%;
+  background-size: 290%;
+  z-index: 1;
 }
 
 .s-box {
@@ -438,12 +452,12 @@ main {
   border-radius: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  box-shadow: 0 0 20px black;
   position: relative;
   overflow: hidden;
-  background: rgba(29, 24, 24, 0.8);
-  -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
+  background: rgba(28, 26, 26, 0.9);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  z-index: 9;
 }
 
 .s-box::after {
@@ -454,7 +468,8 @@ main {
   position: absolute;
   font-size: 13rem;
   font-weight: bold;
-  filter: opacity(0.3);
+  text-shadow: 5px 5px 5px rgb(97, 96, 96);
+  filter: opacity(0.6);
   text-align: right;
   right: 10%;
   z-index: 0;
@@ -520,28 +535,28 @@ main {
   border-right: 3px solid black;
 }
 
-/* html */
+/* react */
 .pro-1::after,
 .pro-1::before {
-  width: 90%;
+  width: 70%;
 }
 
-/* css  */
+/* next  */
 .pro-2::after,
 .pro-2::before {
-  width: 75%;
-}
-
-/* js  */
-.pro-3::after,
-.pro-3::before {
   width: 65%;
 }
 
-/* react js  */
+/* three js  */
+.pro-3::after,
+.pro-3::before {
+  width: 55%;
+}
+
+/*  js  */
 .pro-4::after,
 .pro-4::before {
-  width: 50%;
+  width: 60%;
 }
 
 /* java  */
@@ -554,12 +569,14 @@ main {
 .pro-6::after,
 .pro-6::before {
   width: 50%;
-} /* project==================================== */
+}
+
+/* project==================================== */
 #project {
   width: 100vw;
   height: 100vh;
   position: relative;
-  background: url("../images/pro-back.webp") fixed center;
+  background-color: black;
   background-size: cover;
 }
 
@@ -598,6 +615,7 @@ main {
   width: 100%;
   height: 100%;
   transition: 0.5s all ease;
+  filter: opacity(0.8);
 }
 .project .project1 div a h3 {
   padding-top: 0.5rem;
@@ -669,7 +687,7 @@ main {
   position: absolute;
   bottom: 0;
   overflow: hidden;
-  background: url("../images/about-back.jpg") fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.8) 2%, transparent 85%, rgba(0, 0, 0, 0.6), rgb(0, 0, 0)), url("../images/about-back.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -685,12 +703,13 @@ main {
 #about .abouttext h1 {
   font-size: 4rem;
   margin-bottom: 1rem;
+  color: rgb(54, 116, 209);
 }
 #about .abouttext p {
   font-size: 3rem;
 }
 #about .abouttext a {
-  color: orange;
+  color: rgb(92, 151, 240);
   text-decoration: none;
   display: inline;
 }
@@ -699,7 +718,9 @@ main {
 #post {
   width: 100vw;
   height: 110vh;
-  background: url("../images/post.jpg") fixed;
+  background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.6), transparent 50%, rgb(0, 0, 0)), url("../images/post.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
 }
 #post button {
@@ -740,12 +761,14 @@ main {
 
 /* contact==================================== */
 #contact {
+  flex-direction: row;
   width: 100vw;
   height: 100vh;
   font-size: 4rem;
   position: relative;
-  background: url("../images/contact-back.jpg") fixed center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6), transparent 100%, rgba(0, 0, 0, 0.8)), url("../images/contact-back.jpg") center no-repeat;
   background-size: cover;
+  justify-content: space-evenly !important;
 }
 #contact * {
   overflow: hidden;
@@ -758,8 +781,8 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: rgba(91, 91, 91, 0.8) !important;
-  box-shadow: 5px 5px 500px rgb(127, 126, 126), -5px -5px 500px rgb(97, 96, 96);
+  background-color: rgba(61, 60, 60, 0.8) !important;
+  box-shadow: 5px 5px 10px black;
   transition: 0.3s all ease;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.556);
   padding: 2rem;
@@ -769,7 +792,7 @@ main {
   width: 50%;
   border-radius: 50%;
   transition: 0.3s all ease;
-  box-shadow: 2px 2px 10px rgb(127, 127, 127);
+  box-shadow: 4px 4px 8px rgb(4, 4, 4);
 }
 #contact .left hr {
   width: 90% !important;
@@ -785,7 +808,7 @@ main {
   align-items: center;
   flex-direction: column;
   flex-direction: row !important;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.556);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 #contact .left p a {
   padding: 1rem !important;
@@ -796,10 +819,87 @@ main {
   margin-right: 0.5rem;
 }
 #contact .left:hover {
+  box-shadow: 5px 5px 20px black;
   transform: scale(1.05);
 }
 #contact .left:hover img {
+  box-shadow: 4px 4px 15px rgb(4, 4, 4);
   transform: scale(1.06);
+}
+#contact .container {
+  position: relative;
+  width: 60rem;
+  aspect-ratio: 12/16;
+  border-radius: 5rem;
+  padding: 40px;
+  box-sizing: border-box;
+  background-color: rgba(61, 60, 60, 0.8) !important;
+  box-shadow: 5px 5px 10px black;
+  transition: 0.3s all ease;
+}
+#contact .container .brand-title {
+  margin-top: 10px;
+  font-weight: 900;
+  font-size: 5rem;
+  text-shadow: 2px 2px 3px black;
+  color: #1DA1F2;
+  letter-spacing: 1px;
+}
+#contact .container .inputs {
+  text-align: left;
+  margin-top: 30px;
+}
+#contact .container label, #contact .container input {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+#contact .container label {
+  margin: 10px 0;
+  color: white;
+  margin-bottom: 4px;
+  text-shadow: 2px 2px 3px black;
+  font-size: 3rem;
+}
+#contact .container label:nth-of-type(2) {
+  margin-top: 12px;
+}
+#contact .container input::-moz-placeholder, #contact .container textarea::-moz-placeholder {
+  color: rgb(210, 210, 210);
+}
+#contact .container input::placeholder, #contact .container textarea::placeholder {
+  color: rgb(210, 210, 210);
+}
+#contact .container input, #contact .container textarea {
+  width: 100%;
+  color: white;
+  background: #6e6e6e;
+  padding: 10px;
+  padding-left: 20px;
+  height: 50px;
+  font-size: 14px;
+  border-radius: 50px;
+  border: none;
+  box-shadow: inset 6px 6px 6px #626263, inset -6px -6px 6px rgb(63, 62, 62);
+}
+#contact .container textarea {
+  height: 80px;
+  color: white;
+}
+#contact .container textarea:active,
+#contact .container textarea:focus {
+  outline: none;
+  border: none;
+}
+#contact .container button {
+  margin: 20px;
+}
+#contact .container:hover {
+  box-shadow: 5px 5px 20px black;
+  transform: scale(1.05);
 }
 
 /* qrcode==================================== */
@@ -934,6 +1034,25 @@ main {
   .header-strip .strip-dots {
     left: -8px;
   }
+  .header-strip a {
+    width: 20rem;
+    box-shadow: -2px -2px 5px #5a5a5a, 2px 2px 5px #ffffff;
+    font-size: 8rem;
+  }
+  .header-text h1 {
+    font-size: 22rem;
+  }
+  .header-text h2 {
+    font-size: 11rem;
+    color: #d9d6d6;
+  }
+  .header-text h1, .header-text h2 {
+    text-shadow: 2px 2px 2px black;
+  }
+  .circle_skill {
+    top: 50vh;
+    width: 70%;
+  }
   .s-box {
     grid-template-columns: 1fr !important;
   }
@@ -948,22 +1067,47 @@ main {
     height: 75vh;
     margin-bottom: 70px;
   }
+  #contact {
+    height: 110vh;
+    flex-direction: column;
+  }
   #contact .left {
-    width: 60vw;
+    width: 65vw;
   }
   #contact .left img {
-    width: 50%;
+    width: 45%;
+    margin-bottom: 3rem;
   }
   #contact .left h5 {
     font-size: 5rem;
   }
   #contact .left p {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
   #contact .left:hover {
     transform: none;
   }
   #contact .left:hover img {
+    transform: none;
+  }
+  #contact .container {
+    width: 70vw;
+    overflow: visible;
+    aspect-ratio: 12/12;
+  }
+  #contact .container .brand-title {
+    font-size: 8rem;
+  }
+  #contact .container label, #contact .container input, #contact .container textarea {
+    font-size: 4rem;
+  }
+  #contact .container input {
+    height: 25px;
+  }
+  #contact .container textarea {
+    height: 35px;
+  }
+  #contact .container:hover {
     transform: none;
   }
   #about {
@@ -1012,7 +1156,8 @@ main {
     transform: none !important;
   }
   .button {
-    font-size: 4rem;
-    padding: 2rem;
+    font-size: 5rem;
+    padding: 3rem;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+/* ==============responsive====================== *//*# sourceMappingURL=main.css.map */

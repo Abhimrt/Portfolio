@@ -2,21 +2,39 @@
     width: 100vw;
     height: 100vh;
     position: relative;
-    background: linear-gradient(rgba(255, 255, 255, 0.5),rgba(253, 253, 253, 0.5)),url(../images/coding.webp) fixed center center;
-    background-size: cover;
-    backdrop-filter: blur(8px);
+    background-color: rgb(1,7,30);
+    background: linear-gradient(rgb(1,7,30) 5%,black);
+    // background: linear-gradient(rgba(255, 255, 255, 0.5),rgba(253, 253, 253, 0.5)),url(../images/coding.webp) fixed center center;
+    // background-size: cover;
   }
+
+  .circle_skill{
+    position: absolute;
+    top: 35vh;
+    right: 0;
+    width: 25%;
+    aspect-ratio: 1/2;
+    // border: 1px solid red;
+    border-radius:50% 0 0 50%;
+    background-image: url(../images/skills_bc.gif);
+    background-position: 30% 30%;
+    background-size: 290%;
+    z-index: 1;
+  }
+
   .s-box {
     min-width: 80%;
     min-height: 70%;
     border-radius: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    box-shadow: 0 0 20px black;
+    // box-shadow: 10px 10px 10px rgb(193, 193, 193);
+    // box-shadow: 20px 20px 15px rgba(14, 11, 11, 0.6);
     position: relative;
     overflow: hidden;
-    background: rgba(29, 24, 24, 0.8);
-    backdrop-filter: blur(8px);
+    background: rgba(28, 26, 26, 0.9);
+    backdrop-filter: blur(4px);
+    z-index: 9;
   }
   .s-box::after {
     content: "SKILLS";
@@ -26,7 +44,8 @@
     position: absolute;
     font-size: 13rem;
     font-weight: bold;
-    filter: opacity(.3);
+    text-shadow: 5px 5px 5px rgb(97, 96, 96);
+    filter: opacity(.6);
     text-align: right;
     right: 10%;
     z-index: 0;
@@ -86,25 +105,25 @@
     background-color: transparent;
     border-right: 3px solid black;
   }
-  /* html */
+  /* react */
   .pro-1::after,
   .pro-1::before {
-    width: 90%;
+    width: 70%;
   }
-  /* css  */
+  /* next  */
   .pro-2::after,
   .pro-2::before {
-    width: 75%;
-  }
-  /* js  */
-  .pro-3::after,
-  .pro-3::before {
     width: 65%;
   }
-  /* react js  */
+  /* three js  */
+  .pro-3::after,
+  .pro-3::before {
+    width: 55%;
+  }
+  /*  js  */
   .pro-4::after,
   .pro-4::before {
-    width: 50%;
+    width: 60%;
   }
   /* java  */
   .pro-5::after,

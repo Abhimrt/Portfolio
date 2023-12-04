@@ -130,6 +130,29 @@
     .strip-dots{
       left: -8px;
     }
+    a{
+      width: 20rem;
+      box-shadow:  -2px -2px 5px #5a5a5a,
+             2px 2px 5px #ffffff;
+             font-size: 8rem;
+    }
+  }
+  .header-text{
+    h1{
+      font-size: 22rem;
+    }
+    h2{
+      font-size: 11rem;
+      color: #d9d6d6;
+    }
+    h1,h2{
+      text-shadow: 2px 2px 2px black;
+    }
+  }
+
+  .circle_skill{
+    top: 50vh;
+    width: 70%;
   }
 
 
@@ -149,18 +172,21 @@
     margin-bottom: 70px;
   }
   #contact{
+    height: 110vh;
+    flex-direction: column;
     .left{
-      width: 60vw;
+      width: 65vw;
       // min-height: 75vh;
       // aspect-ratio: 4/3;
       img{
-        width: 50%;
+        width: 45%;
+        margin-bottom: 3rem;
       }
       h5{
         font-size: 5rem;
       }
       p{
-        font-size: 3rem;
+        font-size: 3.5rem;
       }
       &:hover{
         transform: none;
@@ -169,6 +195,30 @@
         }
        
       }
+    }
+    .container{
+      width: 70vw;
+      overflow: visible;
+      aspect-ratio: 12/12;
+
+
+      .brand-title{
+        font-size: 8rem;
+      }
+
+      label, input,textarea {
+        font-size: 4rem;
+      }
+      input{
+        height: 25px;
+      }
+      textarea{
+        height: 35px;
+      }
+      &:hover{
+        transform: none;
+        
+        }
     }
   }
 
@@ -223,7 +273,7 @@
 
   }
   .button{
-    font-size: 4rem;
-    padding: 2rem;
+    font-size: 5rem;
+    padding: 3rem;
   }
 }

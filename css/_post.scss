@@ -1,10 +1,12 @@
 #post {
     width: 100vw;
     height: 110vh;
-    background: url("../images/post.jpg") fixed;
+    background: linear-gradient(rgba(0, 0, 0, 1) ,rgba(0, 0, 0, 0.6) ,transparent 50%,rgba(0, 0, 0, 1) ),url("../images/post.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
 
-    button{
+    button{ 
         position: absolute;
         right: 5rem;
         bottom: 3rem;

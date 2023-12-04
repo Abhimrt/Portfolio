@@ -11,7 +11,7 @@
         position: absolute;
         bottom: 0;
         overflow: hidden;
-        background: url("../images/about-back.jpg") fixed ;
+        background: linear-gradient(rgba(0, 0, 0, 0.8) 2%,transparent 85%,rgba(0, 0, 0, .6),rgba(0, 0, 0, 1) ) ,url("../images/about-back.jpg")  ;
         background-position: center;
         background-size: cover;
     }
@@ -27,13 +27,14 @@
        h1{
            font-size: 4rem;
            margin-bottom: 1rem;
+           color: rgb(54, 116, 209);
        }
        p{
            font-size: 3rem;
        }
 
        a{
-           color: orange;
+           color: rgb(92, 151, 240);
            text-decoration: none;
            display: inline ;
        }
