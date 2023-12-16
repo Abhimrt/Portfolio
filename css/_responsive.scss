@@ -191,6 +191,7 @@
         height: 16.66%;
         transform: translateY(0) !important;
         padding: 20px;
+        box-shadow: 2.5px 2.5px 10px var(--shade2), -2.5px -2.5px 10px var(--shade2);
 
         h2 {
           transform: none !important;
