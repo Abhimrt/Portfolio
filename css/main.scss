@@ -1,32 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Vujahday+Script&display=swap');
 
-*{
+* {
   margin: 0;
   padding: 0;
-  overflow-x : hidden;
+  overflow-x: hidden;
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
   box-sizing: border-box;
 }
-html{
-  font-size: 65.5%!important;
+
+html {
+  font-size: 65.5% !important;
 }
+
 :root {
   --base: #140a15;
   --black: #0b0404;
-  --shade1: #2d0407;
-  --shade2: #ef3513;
+  --shade1: #77bee7;
+  --shade2: #49a8df;
   --shade3: #d70607;
   --shade4: #4b040d;
   --text1: white;
 }
+
 @mixin center {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+
 .center {
   display: flex;
   justify-content: center;
@@ -42,15 +46,15 @@ html{
 
 /* Track */
 ::-webkit-scrollbar-track {
-    margin: 5px;
-    background: #fff;
-    border-radius: 20px;
+  margin: 5px;
+  background: #fff;
+  border-radius: 20px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    border-radius: 20px;
-    background: #77bee7;
+  border-radius: 20px;
+  background: #77bee7;
 }
 
 /* Handle on hover */
@@ -59,11 +63,12 @@ html{
 }
 
 // select
-::-moz-selection{
+::-moz-selection {
   color: black !important;
   background: rgba(255, 255, 255, 0.3);
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
+
 ::selection {
   color: black !important;
   background: rgba(255, 255, 255, 0.3);
@@ -79,41 +84,55 @@ html{
   z-index: 999999999;
   display: block;
 }
+
 // button
-.button{
+.button {
   padding: 2rem;
   font-size: 2.5rem;
   background-color: #77bee7;
   color: #000;
   outline: none;
   border-radius: 3rem;
-  border: 0; 
+  border: 0;
   box-shadow: 5px 5px 20px black;
   transition: .2s all ease;
   overflow: hidden;
-  a{
+
+  a {
     color: #000;
     text-decoration: none;
   }
 
-  &:hover{
+  &:hover {
     transform: scale(1.05)
   }
-  &:active{
+
+  &:active {
     transform: scale(.95);
   }
 }
+
+.resHide {
+  display: block;
+}
+
+.resShow {
+  display: none;
+}
+
 /* ==============nav====================== */
 @import "nav.scss";
 /* ==============nav====================== */
 @import "model.scss";
 /* ==============header====================== */
 @import "header.scss";
+
 /* ==============main====================== */
-main{
-    font-size: 3rem;
-    position: relative;
-  }
+main {
+  font-size: 3rem;
+  position: relative;
+}
+
 /* skills==================================== */
 @import "skill.scss";
 /* project==================================== */

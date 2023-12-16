@@ -16,8 +16,8 @@ html {
 :root {
   --base: #140a15;
   --black: #0b0404;
-  --shade1: #2d0407;
-  --shade2: #ef3513;
+  --shade1: #77bee7;
+  --shade2: #49a8df;
   --shade3: #d70607;
   --shade4: #4b040d;
   --text1: white;
@@ -97,6 +97,14 @@ html {
 }
 .button:active {
   transform: scale(0.95);
+}
+
+.resHide {
+  display: block;
+}
+
+.resShow {
+  display: none;
 }
 
 /* ==============nav====================== */
@@ -432,143 +440,92 @@ main {
   background-color: rgb(1, 7, 30);
   background: linear-gradient(rgb(1, 7, 30) 5%, black);
 }
-
-.circle_skill {
-  position: absolute;
-  top: 35vh;
-  right: 0;
-  width: 25%;
-  aspect-ratio: 1/2;
-  border-radius: 50% 0 0 50%;
-  background-image: url(../images/skills_bc.gif);
-  background-position: 30% 30%;
-  background-size: 290%;
-  z-index: 1;
+.skills .innerSkills {
+  width: 80vw;
+  height: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow: visible;
+  gap: 3rem;
 }
-
-.s-box {
-  min-width: 80%;
-  min-height: 70%;
-  border-radius: 10px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.skills .innerSkills .sillFoldable {
+  width: 16.66%;
+  height: 90%;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+  padding: 60px;
+  overflow: hidden;
+  cursor: pointer;
   position: relative;
-  overflow: hidden;
-  background: rgba(28, 26, 26, 0.9);
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
-  z-index: 9;
+  border: 2px var(--shade1) solid;
+  box-shadow: 5px 5px 20px var(--shade2), -5px -5px 20px var(--shade2);
 }
-
-.s-box::after {
-  content: "SKILLS";
-  color: var(--text1);
-  width: 100%;
-  height: 100%;
+.skills .innerSkills .sillFoldable h2 {
+  font-size: 12rem;
+  font-weight: 600;
+  transform: rotate(90deg) translateX(-50%);
+  transform-origin: 0%;
+  transition: all 0.6s ease-in-out;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
+  overflow: visible;
+  color: var(--shade1);
+  text-shadow: 5px 5px 15px var(--shade2);
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
   position: absolute;
-  font-size: 13rem;
-  font-weight: bold;
-  text-shadow: 5px 5px 5px rgb(97, 96, 96);
-  filter: opacity(0.6);
-  text-align: right;
-  right: 10%;
-  z-index: 0;
+  top: 40%;
+  left: 15rem;
 }
-
-.skill-left,
-.skill-right {
-  height: 100%;
-  margin: 0 12px;
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+.skills .innerSkills .sillFoldable ul {
+  transform: translateX(-1000%);
+  transition: all 0.7s ease-in-out;
+  color: white;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.543);
+  font-size: 4rem;
+  margin-top: 40px;
+  overflow: visible;
 }
-
-.skill {
-  margin-top: 5px;
-  padding: auto;
-  padding-top: 10%;
-  font-size: 10rem;
-  overflow: hidden;
+.skills .innerSkills .sillFoldable ul li {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  letter-spacing: 8px;
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.0549019608);
+  margin-bottom: 4rem;
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 4px 5px 5px rgba(255, 255, 255, 0.526);
+  transition: 0.3s all ease;
+  color: rgba(255, 255, 255, 0.648);
 }
-
-.skill h3 {
-  margin-bottom: 30px;
-  font-size: 3rem;
+.skills .innerSkills .sillFoldable ul li:hover {
+  transform: scale(1.03);
+  box-shadow: 4px 5px 5px rgb(255, 255, 255);
   color: white;
 }
-
-.skill ion-icon,
-.skill i,
-.skill span {
-  font-size: 3rem;
-  color: rgb(152, 251, 121);
-  margin-right: 5px;
-  font-weight: 700;
+.skills .innerSkills .sillFoldable ul li i {
+  font-size: 5rem;
+  margin-right: 5rem;
+  padding: 8px;
 }
-
-.progress {
-  height: 2rem !important;
-  position: relative;
-  cursor: pointer;
-  z-index: 1 !important;
-  border-radius: 2rem !important;
-}
-
-.progress::after {
-  content: "";
-  width: 80%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0%;
-  background-color: #00DBDE;
-  background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
-}
-
-.progress::before {
-  content: "";
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0%;
-  background-color: transparent;
-  border-right: 3px solid black;
-}
-
-/* react */
-.pro-1::after,
-.pro-1::before {
-  width: 70%;
-}
-
-/* next  */
-.pro-2::after,
-.pro-2::before {
-  width: 65%;
-}
-
-/* three js  */
-.pro-3::after,
-.pro-3::before {
-  width: 55%;
-}
-
-/*  js  */
-.pro-4::after,
-.pro-4::before {
-  width: 60%;
-}
-
-/* java  */
-.pro-5::after,
-.pro-5::before {
-  width: 60%;
-}
-
-/* edit */
-.pro-6::after,
-.pro-6::before {
+.skills .innerSkills .active {
   width: 50%;
+}
+.skills .innerSkills .active h2 {
+  font-size: 9rem;
+  font-weight: 900;
+  transform: none;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.skills .innerSkills .active ul {
+  transform: none !important;
 }
 
 /* project==================================== */
@@ -933,6 +890,9 @@ main {
   html {
     font-size: 50% !important;
   }
+  .sillFoldable h2 {
+    font-size: 7rem !important;
+  }
 }
 /* md */
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -956,6 +916,28 @@ main {
 @media (max-width: 479px) {
   html {
     font-size: 15% !important;
+  }
+}
+@media (max-width: 1000px) {
+  .skills .innerSkills {
+    flex-direction: column;
+    gap: 10rem;
+  }
+  .skills .innerSkills .sillFoldable {
+    width: 100% !important;
+    height: 16.66%;
+    transform: translateY(0) !important;
+    padding: 20px;
+  }
+  .skills .innerSkills .sillFoldable h2 {
+    transform: none !important;
+  }
+  .skills .innerSkills .sillFoldable ul {
+    margin: 0;
+    transform: translateY(100%);
+  }
+  .skills .innerSkills .active {
+    height: 60%;
   }
 }
 @media (max-width: 900px) {
@@ -1046,21 +1028,9 @@ main {
     font-size: 11rem;
     color: #d9d6d6;
   }
-  .header-text h1, .header-text h2 {
+  .header-text h1,
+  .header-text h2 {
     text-shadow: 2px 2px 2px black;
-  }
-  .circle_skill {
-    top: 50vh;
-    width: 70%;
-  }
-  .s-box {
-    grid-template-columns: 1fr !important;
-  }
-  .skill h3,
-  .skill ion-icon,
-  .skill i,
-  .skill span {
-    font-size: 6rem !important;
   }
   .project {
     width: 80vw;
@@ -1098,7 +1068,9 @@ main {
   #contact .container .brand-title {
     font-size: 8rem;
   }
-  #contact .container label, #contact .container input, #contact .container textarea {
+  #contact .container label,
+  #contact .container input,
+  #contact .container textarea {
     font-size: 4rem;
   }
   #contact .container input {

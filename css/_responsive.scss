@@ -1,56 +1,104 @@
-/* lg */ 
+/* lg */
 @media (min-width: 1200px) {
-    html{
-        font-size:50% !important;
+  html {
+    font-size: 50% !important;
+  }
+
+  .sillFoldable {
+    h2 {
+      font-size: 7rem !important;
     }
+  }
 }
 
 /* md */
 @media (min-width: 992px) and (max-width: 1199px) {
-	html{
-        font-size:35% !important;
-    }
+  html {
+    font-size: 35% !important;
+  }
+
+
 }
 
 /* sm */
 @media (min-width: 768px) and (max-width: 991px) {
-    html{
-        font-size: 30% !important;;
-    }
-    
+  html {
+    font-size: 30% !important;
+    ;
+  }
+
 }
 
 /* xs */
 @media (max-width: 767px) {
-    html{
-        font-size: 22% !important;;
-    }
-    // .header-strip{
-    //     width: 16rem;
-    // }
+  html {
+    font-size: 22% !important;
+    ;
+  }
+
+  // .header-strip{
+  //     width: 16rem;
+  // }
 }
 
 /* XS Portrait */
 @media (max-width: 479px) {
-    html{
-        font-size: 15% !important;;
+  html {
+    font-size: 15% !important;
+    ;
+  }
+
+  // .header-strip{
+  //     width: 18rem;
+  // }
+}
+
+@media (max-width: 1000px) {
+  .skills {
+    .innerSkills {
+      flex-direction: column;
+      gap: 10rem;
+
+      .sillFoldable {
+        width: 100% !important;
+        height: 16.66%;
+        transform: translateY(0) !important;
+        padding: 20px;
+
+        h2 {
+          transform: none !important;
+        }
+
+        ul {
+
+          margin: 0;
+          transform: translateY(100%);
+        }
+      }
+
+      .active {
+        height: 60%;
+
+        h2 {
+          // top: -3rem !important;
+        }
+      }
     }
-    // .header-strip{
-    //     width: 18rem;
-    // }
+  }
 }
 
 @media (max-width: 900px) {
-	nav{
+
+  nav {
     height: 70px;
     width: 100vw !important;
     top: auto;
     bottom: 0rem;
     z-index: 99;
-    
 
 
-    .nav{
+
+    .nav {
       width: 100vw !important;
       height: 70px !important;
       grid-template-rows: 1fr;
@@ -65,214 +113,240 @@
       border-radius: 0 0 100px 100px;
       justify-content: center;
     }
-    a{
-      i{
+
+    a {
+      i {
         font-size: 25px;
       }
     }
   }
 
-  .active{
+  .active {
     b:nth-child(1) {
       width: $curve-width !important;
       height: 70px !important;
       top: 0 !important;
       left: -$curve-width;
     }
-    b:nth-child(1)::after{
+
+    b:nth-child(1)::after {
       height: 70px !important;
       width: $curve-width;
       border-top-right-radius: 30px !important;
       border-bottom-right-radius: 0rem !important;
     }
+
     b:nth-child(3) {
       width: $curve-width !important;
       height: 70px !important;
       top: 0;
       right: -$curve-width;
     }
-    b:nth-child(3)::after{
+
+    b:nth-child(3)::after {
       height: 70px !important;
       width: $curve-width;
-      border-top-left-radius: 30px ;
+      border-top-left-radius: 30px;
       border-top-right-radius: 0rem !important;
     }
   }
-  
-  nav:hover{
+
+  nav:hover {
     width: 100vw !important;
-    .link{
-        margin-left: 4rem;
-        padding-left: 3rem;
-        justify-content: center;
+
+    .link {
+      margin-left: 4rem;
+      padding-left: 3rem;
+      justify-content: center;
 
     }
-    .active{
-        b:nth-child(1),
-        b:nth-child(3){
-            width: $curve-width;
-        }
+
+    .active {
+
+      b:nth-child(1),
+      b:nth-child(3) {
+        width: $curve-width;
+      }
     }
-    a{
-        text-align: left;
-        // 
-        h2{
-            display: none;
-        }
+
+    a {
+      text-align: left;
+
+      // 
+      h2 {
+        display: none;
+      }
     }
   }
-  .header-strip{
+
+  .header-strip {
     height: 91vh;
-    
-    &::before{
+
+    &::before {
       width: 20px;
     }
-    .strip-dots{
+
+    .strip-dots {
       left: -8px;
     }
-    a{
+
+    a {
       width: 20rem;
-      box-shadow:  -2px -2px 5px #5a5a5a,
-             2px 2px 5px #ffffff;
-             font-size: 8rem;
+      box-shadow: -2px -2px 5px #5a5a5a,
+        2px 2px 5px #ffffff;
+      font-size: 8rem;
     }
   }
-  .header-text{
-    h1{
+
+  .header-text {
+    h1 {
       font-size: 22rem;
     }
-    h2{
+
+    h2 {
       font-size: 11rem;
       color: #d9d6d6;
     }
-    h1,h2{
+
+    h1,
+    h2 {
       text-shadow: 2px 2px 2px black;
     }
   }
 
-  .circle_skill{
-    top: 50vh;
-    width: 70%;
-  }
 
 
 
-  .s-box{
-      grid-template-columns: 1fr !important;
-  }
-  .skill h3,
-  .skill ion-icon,
-  .skill i,
-  .skill span {
-    font-size: 6rem !important;
-  }
-  .project{
+
+
+  .project {
     width: 80vw;
     height: 75vh;
     margin-bottom: 70px;
   }
-  #contact{
+
+  #contact {
     height: 110vh;
     flex-direction: column;
-    .left{
+
+    .left {
       width: 65vw;
+
       // min-height: 75vh;
       // aspect-ratio: 4/3;
-      img{
+      img {
         width: 45%;
         margin-bottom: 3rem;
       }
-      h5{
+
+      h5 {
         font-size: 5rem;
       }
-      p{
+
+      p {
         font-size: 3.5rem;
       }
-      &:hover{
+
+      &:hover {
         transform: none;
-        img{
+
+        img {
           transform: none
         }
-       
+
       }
     }
-    .container{
+
+    .container {
       width: 70vw;
       overflow: visible;
       aspect-ratio: 12/12;
 
 
-      .brand-title{
+      .brand-title {
         font-size: 8rem;
       }
 
-      label, input,textarea {
+      label,
+      input,
+      textarea {
         font-size: 4rem;
       }
-      input{
+
+      input {
         height: 25px;
       }
-      textarea{
+
+      textarea {
         height: 35px;
       }
-      &:hover{
+
+      &:hover {
         transform: none;
-        
-        }
+
+      }
     }
   }
 
-  #about{
+  #about {
     text-shadow: 1px 3px 5px black;
-    .aboutback{
+
+    .aboutback {
       background-position: center;
     }
-    .abouttext{
+
+    .abouttext {
       left: 0%;
       right: 0;
       margin: 0 auto;
       width: 80vw;
 
-      h1{
+      h1 {
         font-size: 8rem;
         margin-bottom: 3rem;
       }
-      p{
+
+      p {
         font-size: 6rem;
       }
-      h2{
+
+      h2 {
         font-size: 4rem;
       }
     }
   }
+
   .model1,
-  .model2{
+  .model2 {
     display: none !important;
   }
-  #post{
-    .button{
+
+  #post {
+    .button {
       right: 10rem !important;
     }
 
     height: 180vh !important;
-     .posts{
+
+    .posts {
       width: 100vw;
       height: 170vh !important;
       justify-content: ceter;
       flex-direction: column !important;
-      
-      iframe{
+
+      iframe {
         border-radius: 4rem;
         width: 80vw;
 
-        &:hover{
-          transform: none !important; 
+        &:hover {
+          transform: none !important;
         }
       }
-     }
+    }
 
   }
-  .button{
+
+  .button {
     font-size: 5rem;
     padding: 3rem;
   }
