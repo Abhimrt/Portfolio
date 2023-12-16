@@ -53,39 +53,6 @@
   // }
 }
 
-@media (max-width: 1000px) {
-  .skills {
-    .innerSkills {
-      flex-direction: column;
-      gap: 10rem;
-
-      .sillFoldable {
-        width: 100% !important;
-        height: 16.66%;
-        transform: translateY(0) !important;
-        padding: 20px;
-
-        h2 {
-          transform: none !important;
-        }
-
-        ul {
-
-          margin: 0;
-          transform: translateY(100%);
-        }
-      }
-
-      .active {
-        height: 60%;
-
-        h2 {
-          // top: -3rem !important;
-        }
-      }
-    }
-  }
-}
 
 @media (max-width: 900px) {
 
@@ -214,7 +181,39 @@
     }
   }
 
+  .skills {
+    .innerSkills {
+      flex-direction: column;
+      gap: 15rem;
 
+      .sillFoldable {
+        width: 100% !important;
+        height: 16.66%;
+        transform: translateY(0) !important;
+        padding: 20px;
+
+        h2 {
+          transform: none !important;
+        }
+
+        ul {
+
+          margin-top: 20px;
+          transform: translateY(100%);
+          font-size: 6rem;
+          letter-spacing: 4px;
+        }
+      }
+
+      .active {
+        height: 60%;
+
+        h2 {
+          // top: -3rem !important;
+        }
+      }
+    }
+  }
 
 
 

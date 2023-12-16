@@ -488,12 +488,12 @@ main {
   font-size: 4rem;
   margin-top: 40px;
   overflow: visible;
+  letter-spacing: 8px;
 }
 .skills .innerSkills .sillFoldable ul li {
   display: flex;
   justify-content: left;
   align-items: center;
-  letter-spacing: 8px;
   font-weight: 600;
   background-color: rgba(0, 0, 0, 0.0549019608);
   margin-bottom: 4rem;
@@ -918,28 +918,6 @@ main {
     font-size: 15% !important;
   }
 }
-@media (max-width: 1000px) {
-  .skills .innerSkills {
-    flex-direction: column;
-    gap: 10rem;
-  }
-  .skills .innerSkills .sillFoldable {
-    width: 100% !important;
-    height: 16.66%;
-    transform: translateY(0) !important;
-    padding: 20px;
-  }
-  .skills .innerSkills .sillFoldable h2 {
-    transform: none !important;
-  }
-  .skills .innerSkills .sillFoldable ul {
-    margin: 0;
-    transform: translateY(100%);
-  }
-  .skills .innerSkills .active {
-    height: 60%;
-  }
-}
 @media (max-width: 900px) {
   nav {
     height: 70px;
@@ -1031,6 +1009,28 @@ main {
   .header-text h1,
   .header-text h2 {
     text-shadow: 2px 2px 2px black;
+  }
+  .skills .innerSkills {
+    flex-direction: column;
+    gap: 15rem;
+  }
+  .skills .innerSkills .sillFoldable {
+    width: 100% !important;
+    height: 16.66%;
+    transform: translateY(0) !important;
+    padding: 20px;
+  }
+  .skills .innerSkills .sillFoldable h2 {
+    transform: none !important;
+  }
+  .skills .innerSkills .sillFoldable ul {
+    margin-top: 20px;
+    transform: translateY(100%);
+    font-size: 6rem;
+    letter-spacing: 4px;
+  }
+  .skills .innerSkills .active {
+    height: 60%;
   }
   .project {
     width: 80vw;
