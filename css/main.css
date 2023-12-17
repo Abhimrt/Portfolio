@@ -529,12 +529,152 @@ main {
 }
 
 /* project==================================== */
+@media (max-width: 900px) {
+  #project {
+    padding: 5rem;
+  }
+  #project h2 {
+    margin-bottom: 10rem !important;
+  }
+  #project .projectScrollWrapper {
+    margin: 15rem;
+    transform: scale(1.6) translateX(10vw);
+    width: 70vw;
+  }
+}
 #project {
   width: 100vw;
-  height: 100vh;
+  max-height: 100vh;
   position: relative;
-  background-color: black;
+  background-color: #000;
+  color: white;
+  overflow: hidden;
   background-size: cover;
+}
+#project h2 {
+  font-size: 15rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  text-shadow: 0.5rem 0.5rem 0.1rem rgba(255, 255, 255, 0.262);
+}
+#project .projectScrollWrapper {
+  width: 80vw;
+  overflow: hidden;
+  height: calc(70rem + 3rem);
+  transition: 0.3s all ease;
+  display: block;
+}
+#project .projectScrollWrapper .horizontal-scroll-wrapper {
+  display: block;
+  width: calc(70rem + 0.1rem);
+  max-height: 210rem;
+  margin: 0;
+  padding-top: 0.1rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg) translateY(-70rem);
+  transform-origin: right top;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  /* Hide scrollbar for IE, Edge and Firefox */
+}
+#project .projectScrollWrapper .horizontal-scroll-wrapper > div {
+  display: block;
+  background-color: #01171f;
+  transform: rotate(90deg);
+  transform-origin: right top;
+  border-radius: 3rem;
+  cursor: pointer;
+  overflow: hidden;
+  scale: 0.95;
+}
+#project .projectScrollWrapper .horizontal-scroll-wrapper > div .moreLink {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  font-size: 12rem;
+  font-weight: 600;
+}
+#project .projectScrollWrapper .horizontal-scroll-wrapper > div .moreLink span {
+  padding: 10rem;
+}
+#project .projectScrollWrapper .horizontal-scroll-wrapper > div .image {
+  width: 100%;
+  height: 50%;
+  background-color: #fff;
+}
+#project .projectScrollWrapper .horizontal-scroll-wrapper > div .content {
+  margin: 3rem;
+}
+#project .projectScrollWrapper .horizontal-scroll-wrapper > div .content .bar {
+  width: 8rem;
+  height: 1rem;
+  background-color: aqua;
+  border-radius: 0.5rem;
+  box-shadow: inset 0.1rem 0.1rem 0.5rem black, inset -0.1rem -0.1rem 0.5rem #942e2e;
+}
+#project .projectScrollWrapper .horizontal-scroll-wrapper > div .content .heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#project .projectScrollWrapper .horizontal-scroll-wrapper > div .content .heading h3 {
+  letter-spacing: 4px;
+  font-size: 4rem;
+  font-weight: 600;
+}
+#project .projectScrollWrapper .horizontal-scroll-wrapper > div .content .heading ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 5rem;
+}
+#project .projectScrollWrapper .horizontal-scroll-wrapper > div .content .heading ul li {
+  height: 3rem;
+  background-color: rgba(78, 78, 78, 0.377);
+  padding: 0 1rem;
+  padding-bottom: 0 !important;
+  color: rgb(125, 125, 125);
+  border-radius: 5px;
+  font-size: 1.5rem;
+  display: grid;
+  place-items: center;
+}
+#project .projectScrollWrapper .horizontal-scroll-wrapper > div .content .heading a {
+  background-color: rgba(8, 82, 82, 0.377);
+  padding: 3px 8px;
+  padding-top: 5px;
+  color: rgb(8, 201, 8);
+  border-radius: 5px;
+  font-size: 1.5rem;
+  height: 3rem;
+  overflow: hidden;
+}
+#project .projectScrollWrapper .horizontal-scroll-wrapper > div .content p {
+  margin-top: 2rem;
+  height: 12rem;
+  width: 100%;
+  overflow: hidden;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.4980392157);
+}
+#project .projectScrollWrapper .horizontal-scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+#project .projectScrollWrapper .horizontal-scroll-wrapper {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+#project .projectScrollWrapper .squares {
+  padding: 70rem 0 0 0;
+}
+#project .projectScrollWrapper .squares > div {
+  width: 70rem;
+  height: 70rem;
+  margin: 10px 0;
 }
 
 .project {
