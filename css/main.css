@@ -546,7 +546,7 @@ main {
   font-size: 15rem;
   font-weight: 600;
   margin-bottom: 3rem;
-  text-shadow: 0.5rem 0.5rem 0.1rem rgba(255, 255, 255, 0.262);
+  text-shadow: 0.5rem 0.5rem 0.2rem var(--shade2);
   padding: 1rem;
   min-height: 30rem;
 }
@@ -560,8 +560,8 @@ main {
 #project .projectScrollWrapper .projectScrollWrapperInner {
   display: flex;
   overflow-x: auto;
-  gap: 4rem;
-  padding-bottom: 2rem;
+  gap: 5rem;
+  padding: 7rem 0rem;
   scroll-snap-type: x mandatory;
 }
 #project .projectScrollWrapper .projectScrollWrapperInner::-webkit-scrollbar-track {
@@ -577,9 +577,6 @@ main {
   cursor: pointer;
   overflow: hidden;
   scroll-snap-align: center;
-}
-#project .projectScrollWrapper .projectScrollWrapperInner > div:nth-last-child(1) {
-  margin-right: 5rem;
 }
 #project .projectScrollWrapper .projectScrollWrapperInner > div .moreLink {
   width: 100%;
@@ -677,6 +674,19 @@ main {
   overflow: hidden;
   font-size: 2rem;
   color: rgba(255, 255, 255, 0.4980392157);
+}
+#project .projectScrollWrapper .projectScrollWrapperInner > div:nth-last-child(1) {
+  margin-right: 5rem;
+}
+#project .projectScrollWrapper .projectScrollWrapperInner > div:nth-child(2n) {
+  transform: translateY(5rem);
+  background-color: #062631;
+}
+#project .projectScrollWrapper .projectScrollWrapperInner > div:nth-child(2n) .bar {
+  background-color: orange;
+}
+#project .projectScrollWrapper .projectScrollWrapperInner > div:nth-child(2n+1) {
+  transform: translateY(-5rem);
 }
 
 /* project==================================== */
@@ -1138,9 +1148,13 @@ main {
   #project .projectScrollWrapper {
     width: 90vw;
   }
+  #project .projectScrollWrapper .projectScrollWrapperInner {
+    padding: 0 !important;
+  }
   #project .projectScrollWrapper .projectScrollWrapperInner > div {
     scale: 2;
     margin: 52rem 40rem;
+    transform: none !important;
   }
   #project .projectScrollWrapper .projectScrollWrapperInner > div:nth-child(1) {
     margin-left: 35rem;

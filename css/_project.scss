@@ -12,7 +12,7 @@
         font-size: 15rem;
         font-weight: 600;
         margin-bottom: 3rem;
-        text-shadow: .5rem .5rem .1rem rgba(255, 255, 255, 0.262);
+        text-shadow: .5rem .5rem .2rem var(--shade2);
         padding: 1rem;
         min-height: 30rem;
 
@@ -29,8 +29,8 @@
         .projectScrollWrapperInner {
             display: flex;
             overflow-x: auto;
-            gap: 4rem;
-            padding-bottom: 2rem;
+            gap: 5rem;
+            padding: 7rem 0rem;
             scroll-snap-type: x mandatory;
 
             &::-webkit-scrollbar-track {
@@ -50,9 +50,6 @@
                 overflow: hidden;
                 scroll-snap-align: center;
 
-                &:nth-last-child(1) {
-                    margin-right: 5rem;
-                }
 
 
                 .moreLink {
@@ -175,7 +172,24 @@
                     }
                 }
 
+                &:nth-last-child(1) {
+                    margin-right: 5rem;
+                }
+
+                &:nth-child(2n) {
+                    transform: translateY(5rem);
+                    background-color: #062631;
+
+                    .bar {
+                        background-color: orange;
+                    }
+                }
+
+                &:nth-child(2n+1) {
+                    transform: translateY(-5rem);
+                }
             }
+
 
 
         }

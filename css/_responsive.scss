@@ -231,10 +231,12 @@
       width: 90vw;
 
       .projectScrollWrapperInner {
+        padding: 0 !important;
 
         &>div {
           scale: 2;
           margin: 52rem 40rem;
+          transform: none !important;
         }
 
         &>div:nth-child(1) {
