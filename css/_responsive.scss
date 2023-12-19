@@ -219,10 +219,31 @@
 
 
 
-  .project {
-    width: 80vw;
-    height: 75vh;
-    margin-bottom: 70px;
+  #project {
+    padding: 5rem;
+
+    h2 {
+      margin-bottom: 10rem !important;
+    }
+
+
+    .projectScrollWrapper {
+      width: 90vw;
+
+      .projectScrollWrapperInner {
+
+        &>div {
+          scale: 2;
+          margin: 52rem 40rem;
+        }
+
+        &>div:nth-child(1) {
+          margin-left: 35rem;
+        }
+      }
+
+
+    }
   }
 
   #contact {
