@@ -535,7 +535,6 @@ main {
 /* project==================================== */
 #project {
   width: 100vw;
-  min-height: 100vh;
   position: relative;
   background-color: #000;
   color: white;
