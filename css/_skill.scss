@@ -49,7 +49,7 @@
         z-index: 1;
         position: absolute;
         top: 40%;
-        left: 15rem;
+        left: 10rem;
       }
 
       ul {
@@ -57,7 +57,7 @@
         transition: all .7s ease-in-out;
         color: white;
         text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.543);
-        font-size: 4rem;
+        font-size: 3rem;
         margin-top: 40px;
         overflow: visible;
         letter-spacing: 8px;
@@ -68,7 +68,7 @@
           align-items: center;
           font-weight: 600;
           background-color: #0000000e;
-          margin-bottom: 4rem;
+          margin-bottom: 3rem;
           padding: 1rem;
           border-radius: 15px;
           // border: 1px solid rgba(255, 255, 255, 0.672);
@@ -85,8 +85,8 @@
 
           i {
             // color: ;
-            font-size: 5rem;
-            margin-right: 5rem;
+            font-size: 3rem;
+            margin-right: 3rem;
             padding: 8px;
           }
         }

@@ -1,6 +1,6 @@
 #project {
     width: 100vw;
-    max-height: 100vh;
+    min-height: 100vh;
     position: relative;
     background-color: #000;
     color: white;
@@ -24,23 +24,35 @@
         overflow: hidden;
         transition: .3s all ease;
         display: block;
+        margin-bottom: 5rem;
 
         .projectScrollWrapperInner {
             display: flex;
             overflow-x: auto;
             gap: 4rem;
             padding-bottom: 2rem;
+            scroll-snap-type: x mandatory;
 
+            &::-webkit-scrollbar-track {
+                margin: 5px;
+                background: transparent;
+                border-radius: 20px;
+
+            }
 
 
             &>div {
-                min-width: 60rem;
-                aspect-ratio: 3/4;
+                min-width: min(60rem, 85vw);
                 display: block;
                 background-color: #01171f;
                 border-radius: 3rem;
                 cursor: pointer;
                 overflow: hidden;
+                scroll-snap-align: center;
+
+                &:nth-last-child(1) {
+                    margin-right: 5rem;
+                }
 
 
                 .moreLink {
@@ -87,8 +99,9 @@
 
                 .image {
                     width: 100%;
-                    height: 50%;
+                    height: 40%;
                     background-color: #fff;
+                    overflow: hidden;
                 }
 
                 .content {
