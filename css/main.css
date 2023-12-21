@@ -574,7 +574,7 @@ main {
   border-radius: 20px;
 }
 #project .projectScrollWrapper .projectScrollWrapperInner > div {
-  min-width: min(60rem, 85vw);
+  min-width: min(60rem, 80vw);
   display: block;
   background-color: #01171f;
   border-radius: 3rem;
@@ -1283,15 +1283,35 @@ main {
     padding: 0 !important;
   }
   #project .projectScrollWrapper .projectScrollWrapperInner > div {
-    scale: 2;
+    scale: 2.2;
     margin: 52rem 40rem;
     transform: none !important;
   }
-  #project .projectScrollWrapper .projectScrollWrapperInner > div:nth-child(1) {
-    margin-left: 35rem;
+  #project .projectScrollWrapper .projectScrollWrapperInner > div h3 {
+    font-size: 5rem !important;
+    letter-spacing: 1px !important;
   }
-  #project .projectScrollWrapper .projectScrollWrapperInner h3 {
-    letter-spacing: 1px;
+  #project .projectScrollWrapper .projectScrollWrapperInner > div ul {
+    flex-wrap: wrap;
+    margin-right: 1rem;
+    justify-content: center !important;
+  }
+  #project .projectScrollWrapper .projectScrollWrapperInner > div ul li {
+    height: 3rem !important;
+    font-size: 2rem !important;
+  }
+  #project .projectScrollWrapper .projectScrollWrapperInner > div .heading a {
+    height: 3rem !important;
+    font-size: 2rem !important;
+    overflow: visible !important;
+  }
+  #project .projectScrollWrapper .projectScrollWrapperInner > div p {
+    font-size: 2.5rem !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+  }
+  #project .projectScrollWrapper .projectScrollWrapperInner > div:nth-child(1) {
+    margin-left: 40rem;
   }
   #timeline .timelineContent .timelineTextBox::after {
     font-size: 3rem;

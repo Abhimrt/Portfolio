@@ -240,18 +240,44 @@
         padding: 0 !important;
 
         &>div {
-          scale: 2;
+          scale: 2.2;
           margin: 52rem 40rem;
           transform: none !important;
+
+          h3 {
+            font-size: 5rem !important;
+            letter-spacing: 1px !important;
+          }
+
+          ul {
+            flex-wrap: wrap;
+            margin-right: 1rem;
+            justify-content: center !important;
+
+            li {
+              height: 3rem !important;
+              font-size: 2rem !important;
+            }
+          }
+
+          .heading a {
+            height: 3rem !important;
+            font-size: 2rem !important;
+            overflow: visible !important;
+          }
+
+          p {
+            font-size: 2.5rem !important;
+            height: fit-content !important;
+          }
+
         }
 
         &>div:nth-child(1) {
-          margin-left: 35rem;
+          margin-left: 40rem;
         }
 
-        h3 {
-          letter-spacing: 1px;
-        }
+
 
       }
 

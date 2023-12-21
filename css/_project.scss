@@ -42,8 +42,7 @@
 
 
             &>div {
-                min-width: min(60rem, 85vw);
-
+                min-width: min(60rem, 80vw);
                 display: block;
                 background-color: #01171f;
                 border-radius: 3rem;
@@ -157,6 +156,7 @@
                             justify-content: center;
                             align-items: center;
                             gap: .5rem;
+
 
 
                         }
