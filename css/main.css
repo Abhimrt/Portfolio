@@ -103,14 +103,6 @@ body {
   transform: scale(0.95);
 }
 
-.resHide {
-  display: block;
-}
-
-.resShow {
-  display: none;
-}
-
 /* ==============nav====================== */
 nav {
   height: 100vh;
@@ -489,7 +481,7 @@ main {
   transition: all 0.7s ease-in-out;
   color: white;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.543);
-  font-size: 3rem;
+  font-size: 2rem;
   margin-top: 40px;
   overflow: visible;
   letter-spacing: 8px;
@@ -513,9 +505,10 @@ main {
   color: white;
 }
 .skills .innerSkills .sillFoldable ul li i {
-  font-size: 3rem;
+  font-size: 2rem;
   margin-right: 3rem;
   padding: 8px;
+  color: orange;
 }
 .skills .innerSkills .active {
   width: 50%;
@@ -688,52 +681,160 @@ main {
   transform: translateY(-5rem);
 }
 
-/* project==================================== */
-#photo {
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/photo-background.webp") center;
-  background-size: cover;
-  background-attachment: fixed;
+/* timeline==================================== */
+#timeline {
+  width: 80vw;
+  margin: auto;
+  color: white;
+  overflow: visible;
 }
-#photo .photo {
-  width: 85vw;
-  height: 80vh;
-  padding: 30px;
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 3rem;
+#timeline .timelineContent {
+  overflow: visible;
 }
-#photo .photo .photo1 {
+#timeline .timelineContent .timelineTextBox {
+  position: relative;
+  padding: 5rem;
+  overflow: visible;
+}
+#timeline .timelineContent .timelineTextBox .border {
+  position: absolute;
+  top: 0;
+  width: 50%;
   height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  padding: 30px;
-  overflow: hidden;
-  grid-gap: 3rem;
+  border: 0.5rem solid var(--shade1);
 }
-#photo .photo .photo1 .pic-1 {
-  grid-row: 1/4;
-  grid-column: 1/4;
+#timeline .timelineContent .timelineTextBox:after {
+  position: absolute;
+  content: "1";
+  padding: 1rem;
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--shade1);
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 50%;
+  top: 50%;
 }
-#photo .photo .photo1 .pic-2 {
-  grid-row: 2/5;
-  grid-column: 1/4;
+#timeline .timelineContent .timelineTextBox:nth-child(2n+1)::after {
+  left: -2.5rem;
 }
-#photo .photo .photo1 div {
-  border-radius: 2rem;
-  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
-  transition: 0.3s all ease;
+#timeline .timelineContent .timelineTextBox:nth-child(2n+1) .border {
+  border-radius: 6rem 0 0 6rem;
+  border-right: none;
+  left: 0px;
 }
-#photo .photo .photo1 div:hover {
-  box-shadow: 0px 0px 20px white;
-  transform: scale(1.1);
+#timeline .timelineContent .timelineTextBox:nth-child(2n)::after {
+  right: -2.5rem;
 }
-#photo .photo .photo1 div img {
-  width: 100%;
-  height: 100%;
+#timeline .timelineContent .timelineTextBox:nth-child(2n) .border {
+  right: 0px;
+  border-radius: 0 6rem 6rem 0;
+  border-left: none;
+}
+#timeline .timelineContent .timelineTextBox:nth-child(1) .border {
+  border-top: none;
+  overflow: visible;
+  border-radius: 0rem 0rem 0rem 6rem;
+}
+#timeline .timelineContent .timelineTextBox:nth-child(1) .border::after {
+  content: "";
+  position: absolute;
+  background: #000;
+  width: 0.5rem;
+  height: 50%;
+  top: 0;
+  left: -0.5rem;
+}
+#timeline .timelineContent .timelineTextBox .left {
+  border-bottom: none !important;
+  overflow: visible;
+  border-radius: 0rem 6rem 0rem 0rem !important;
+}
+#timeline .timelineContent .timelineTextBox .left::after {
+  content: "";
+  position: absolute;
+  background: #000;
+  width: 0.5rem;
+  height: 50%;
+  bottom: 0;
+  right: -0.5rem;
+}
+#timeline .timelineContent .timelineTextBox .right {
+  border-bottom: none !important;
+  overflow: visible;
+  border-radius: 6rem 0rem 0rem 0 !important;
+}
+#timeline .timelineContent .timelineTextBox .right::after {
+  content: "";
+  position: absolute;
+  background: #000;
+  width: 0.5rem;
+  height: 50%;
+  bottom: 0;
+  left: -0.5rem;
+}
+#timeline .timelineContent .timelineTextBox:nth-child(2) {
+  top: -0.5rem;
+}
+#timeline .timelineContent .timelineTextBox:nth-child(2)::after {
+  content: "2";
+}
+#timeline .timelineContent .timelineTextBox:nth-child(3) {
+  top: -1rem;
+}
+#timeline .timelineContent .timelineTextBox:nth-child(3)::after {
+  content: "3";
+}
+#timeline .timelineContent .timelineTextBox:nth-child(4) {
+  top: -1.5rem;
+}
+#timeline .timelineContent .timelineTextBox:nth-child(4)::after {
+  content: "4";
+}
+#timeline .timelineContent .timelineTextBox:nth-child(5) {
+  top: -2rem;
+}
+#timeline .timelineContent .timelineTextBox:nth-child(5)::after {
+  content: "5";
+}
+#timeline .timelineContent .timelineTextBox:nth-child(6) {
+  top: -2.5rem;
+}
+#timeline .timelineContent .timelineTextBox:nth-child(6)::after {
+  content: "6";
+}
+#timeline .timelineContent .timelineTextBox:nth-child(7) {
+  top: -3rem;
+}
+#timeline .timelineContent .timelineTextBox:nth-child(7)::after {
+  content: "7";
+}
+#timeline .timelineContent .timelineTextBox:nth-child(8) {
+  top: -3.5rem;
+}
+#timeline .timelineContent .timelineTextBox:nth-child(8)::after {
+  content: "8";
+}
+#timeline .timelineContent .timelineTextBox:nth-child(9) {
+  top: -4rem;
+}
+#timeline .timelineContent .timelineTextBox:nth-child(9)::after {
+  content: "9";
+}
+#timeline .timelineContent .timelineTextBox:nth-child(10) {
+  top: -4.5rem;
+}
+#timeline .timelineContent .timelineTextBox:nth-child(10)::after {
+  content: "10";
+}
+#timeline .timelineContent .timelineTextBox:nth-child(11) {
+  top: -5rem;
+}
+#timeline .timelineContent .timelineTextBox:nth-child(11)::after {
+  content: "11";
 }
 
 /* about==================================== */
