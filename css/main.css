@@ -103,6 +103,18 @@ body {
   transform: scale(0.95);
 }
 
+.h2Heading {
+  font-size: 15rem;
+  font-weight: 600;
+  text-shadow: 0.5rem 0.5rem 0.2rem var(--shade2);
+  padding: 1rem;
+  min-height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 /* ==============nav====================== */
 nav {
   height: 100vh;
@@ -836,6 +848,21 @@ main {
 #timeline .timelineContent .timelineTextBox:nth-child(11)::after {
   content: "11";
 }
+#timeline .timelineContent .timelineTextBox h2 {
+  font-size: 5rem;
+  font-weight: 700;
+}
+#timeline .timelineContent .timelineTextBox .position,
+#timeline .timelineContent .timelineTextBox .date {
+  font-size: 2rem;
+  color: gray;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+#timeline .timelineContent .timelineTextBox p {
+  color: rgb(217, 216, 216);
+  font-weight: 400;
+}
 
 /* about==================================== */
 #about {
@@ -1236,14 +1263,17 @@ main {
     font-size: 6rem;
     letter-spacing: 4px;
   }
+  .skills .innerSkills .sillFoldable ul i {
+    font-size: 6rem !important;
+  }
   .skills .innerSkills .active {
     height: 60%;
   }
+  .h2Heading {
+    text-shadow: 0.8rem 0.8rem 0.5rem var(--shade2);
+  }
   #project {
     padding: 5rem;
-  }
-  #project h2 {
-    margin-bottom: 10rem !important;
   }
   #project .projectScrollWrapper {
     width: 90vw;
@@ -1260,7 +1290,20 @@ main {
     margin-left: 35rem;
   }
   #project .projectScrollWrapper .projectScrollWrapperInner h3 {
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+  }
+  #timeline .timelineContent .timelineTextBox::after {
+    font-size: 3rem;
+  }
+  #timeline .timelineContent .timelineTextBox h2 {
+    font-size: 8rem;
+  }
+  #timeline .timelineContent .timelineTextBox .position,
+  #timeline .timelineContent .timelineTextBox .date {
+    font-size: 3.2rem;
+  }
+  #timeline .timelineContent .timelineTextBox p {
+    font-style: 3rem;
   }
   #contact {
     height: 110vh;

@@ -116,6 +116,17 @@ body {
   }
 }
 
+// heading
+.h2Heading {
+  font-size: 15rem;
+  font-weight: 600;
+  // margin-bottom: 3rem;
+  text-shadow: .5rem .5rem .2rem var(--shade2);
+  padding: 1rem;
+  min-height: 30rem;
+  @include center;
+  // text-decoration: to-upper-case($string: "")
+}
 
 
 /* ==============nav====================== */

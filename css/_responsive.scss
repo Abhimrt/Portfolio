@@ -203,6 +203,10 @@
           transform: translateY(100%);
           font-size: 6rem;
           letter-spacing: 4px;
+
+          i {
+            font-size: 6rem !important;
+          }
         }
       }
 
@@ -219,12 +223,13 @@
 
 
 
+  .h2Heading {
+    text-shadow: .8rem .8rem .5rem var(--shade2);
+  }
+
   #project {
     padding: 5rem;
 
-    h2 {
-      margin-bottom: 10rem !important;
-    }
 
 
     .projectScrollWrapper {
@@ -244,12 +249,36 @@
         }
 
         h3 {
-          letter-spacing: 2px;
+          letter-spacing: 1px;
         }
 
       }
 
 
+    }
+  }
+
+  #timeline {
+    .timelineContent {
+      .timelineTextBox {
+
+        &::after {
+          font-size: 3rem;
+        }
+
+        h2 {
+          font-size: 8rem;
+        }
+
+        .position,
+        .date {
+          font-size: 3.2rem;
+        }
+
+        p {
+          font-style: 3rem;
+        }
+      }
     }
   }
 
