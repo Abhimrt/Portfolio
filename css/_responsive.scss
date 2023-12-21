@@ -224,6 +224,7 @@
 
 
   .h2Heading {
+    font-size: 22rem;
     text-shadow: .8rem .8rem .5rem var(--shade2);
   }
 
@@ -267,16 +268,16 @@
         }
 
         h2 {
-          font-size: 8rem;
+          font-size: 12rem;
         }
 
         .position,
         .date {
-          font-size: 3.2rem;
+          font-size: 4rem;
         }
 
         p {
-          font-style: 3rem;
+          font-size: 6rem;
         }
       }
     }

@@ -1270,6 +1270,7 @@ main {
     height: 60%;
   }
   .h2Heading {
+    font-size: 22rem;
     text-shadow: 0.8rem 0.8rem 0.5rem var(--shade2);
   }
   #project {
@@ -1296,14 +1297,14 @@ main {
     font-size: 3rem;
   }
   #timeline .timelineContent .timelineTextBox h2 {
-    font-size: 8rem;
+    font-size: 12rem;
   }
   #timeline .timelineContent .timelineTextBox .position,
   #timeline .timelineContent .timelineTextBox .date {
-    font-size: 3.2rem;
+    font-size: 4rem;
   }
   #timeline .timelineContent .timelineTextBox p {
-    font-style: 3rem;
+    font-size: 6rem;
   }
   #contact {
     height: 110vh;
