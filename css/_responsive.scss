@@ -288,8 +288,10 @@
   #timeline {
     .timelineContent {
       .timelineTextBox {
+        padding: 8rem;
 
         &::after {
+          scale: 2;
           font-size: 3rem;
         }
 

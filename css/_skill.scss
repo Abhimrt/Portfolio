@@ -26,8 +26,14 @@
       overflow: hidden;
       cursor: pointer;
       position: relative;
-      border: 2px var(--shade1) solid;
-      box-shadow: 5px 5px 20px var(--shade2), -5px -5px 20px var(--shade2);
+      border: 5px var(--shade4) solid;
+      // box-shadow: 5px 5px 20px var(--shade2), -5px -5px 20px var(--shade2);
+      background: var(--shade3);
+
+      &:nth-child(2n) {
+        background-color: var(--shade4);
+        border: 5px var(--shade3) solid;
+      }
 
 
 
@@ -42,7 +48,7 @@
         height: auto;
         overflow: visible;
         color: var(--shade1);
-        text-shadow: 5px 5px 15px var(--shade2);
+        text-shadow: 3px 3px 10px var(--shade2);
         text-transform: uppercase;
         position: relative;
         z-index: 1;

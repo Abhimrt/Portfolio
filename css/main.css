@@ -21,9 +21,9 @@ body {
   --base: #140a15;
   --black: #0b0404;
   --shade1: #77bee7;
-  --shade2: #49a8df;
-  --shade3: #d70607;
-  --shade4: #4b040d;
+  --shade2: #3a9bd4;
+  --shade3: #01171f;
+  --shade4: #062631;
   --text1: white;
 }
 
@@ -466,8 +466,12 @@ main {
   overflow: hidden;
   cursor: pointer;
   position: relative;
-  border: 2px var(--shade1) solid;
-  box-shadow: 5px 5px 20px var(--shade2), -5px -5px 20px var(--shade2);
+  border: 5px var(--shade4) solid;
+  background: var(--shade3);
+}
+.skills .innerSkills .sillFoldable:nth-child(2n) {
+  background-color: var(--shade4);
+  border: 5px var(--shade3) solid;
 }
 .skills .innerSkills .sillFoldable h2 {
   font-size: 12rem;
@@ -480,7 +484,7 @@ main {
   height: auto;
   overflow: visible;
   color: var(--shade1);
-  text-shadow: 5px 5px 15px var(--shade2);
+  text-shadow: 3px 3px 10px var(--shade2);
   text-transform: uppercase;
   position: relative;
   z-index: 1;
@@ -576,11 +580,12 @@ main {
 #project .projectScrollWrapper .projectScrollWrapperInner > div {
   min-width: min(60rem, 80vw);
   display: block;
-  background-color: #01171f;
+  background-color: var(--shade3);
   border-radius: 3rem;
   cursor: pointer;
   overflow: hidden;
   scroll-snap-align: center;
+  border: 5px var(--shade4) solid;
 }
 #project .projectScrollWrapper .projectScrollWrapperInner > div .moreLink {
   width: 100%;
@@ -684,7 +689,8 @@ main {
 }
 #project .projectScrollWrapper .projectScrollWrapperInner > div:nth-child(2n) {
   transform: translateY(5rem);
-  background-color: #062631;
+  background-color: var(--shade4);
+  border: 5px var(--shade3) solid;
 }
 #project .projectScrollWrapper .projectScrollWrapperInner > div:nth-child(2n) .bar {
   background-color: orange;
@@ -713,7 +719,7 @@ main {
   top: 0;
   width: 50%;
   height: 100%;
-  border: 0.5rem solid var(--shade1);
+  border: 0.5rem solid var(--shade2);
 }
 #timeline .timelineContent .timelineTextBox:after {
   position: absolute;
@@ -721,7 +727,7 @@ main {
   padding: 1rem;
   width: 5rem;
   height: 5rem;
-  background-color: var(--shade1);
+  background-color: var(--shade4);
   transform: translateY(-50%);
   display: flex;
   justify-content: center;
@@ -729,6 +735,7 @@ main {
   flex-direction: column;
   border-radius: 50%;
   top: 50%;
+  border: 0.5rem solid var(--shade2);
 }
 #timeline .timelineContent .timelineTextBox:nth-child(2n+1)::after {
   left: -2.5rem;
@@ -1313,7 +1320,11 @@ main {
   #project .projectScrollWrapper .projectScrollWrapperInner > div:nth-child(1) {
     margin-left: 40rem;
   }
+  #timeline .timelineContent .timelineTextBox {
+    padding: 8rem;
+  }
   #timeline .timelineContent .timelineTextBox::after {
+    scale: 2;
     font-size: 3rem;
   }
   #timeline .timelineContent .timelineTextBox h2 {

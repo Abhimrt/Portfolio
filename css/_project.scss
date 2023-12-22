@@ -44,11 +44,12 @@
             &>div {
                 min-width: min(60rem, 80vw);
                 display: block;
-                background-color: #01171f;
+                background-color: var(--shade3);
                 border-radius: 3rem;
                 cursor: pointer;
                 overflow: hidden;
                 scroll-snap-align: center;
+                border: 5px var(--shade4) solid;
 
 
 
@@ -89,10 +90,6 @@
                     }
                 }
 
-
-                &:hover {
-                    .image {}
-                }
 
                 .image {
                     width: 100%;
@@ -179,7 +176,8 @@
 
                 &:nth-child(2n) {
                     transform: translateY(5rem);
-                    background-color: #062631;
+                    background-color: var(--shade4);
+                    border: 5px var(--shade3) solid;
 
                     .bar {
                         background-color: orange;
