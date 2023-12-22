@@ -760,6 +760,7 @@ main {
 }
 #timeline .timelineContent .timelineTextBox:nth-child(2n) {
   background: linear-gradient(to left, var(--shade3), transparent);
+  text-align: right;
 }
 #timeline .timelineContent .timelineTextBox:nth-child(2n)::after {
   right: -2.5rem;
