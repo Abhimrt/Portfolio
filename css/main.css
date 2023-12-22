@@ -720,6 +720,7 @@ main {
   position: relative;
   padding: 5rem;
   overflow: visible;
+  border-radius: 6rem;
 }
 #timeline .timelineContent .timelineTextBox .border {
   position: absolute;
@@ -727,6 +728,7 @@ main {
   width: 50%;
   height: 100%;
   border: 0.5rem solid var(--shade2);
+  z-index: 1;
 }
 #timeline .timelineContent .timelineTextBox:after {
   position: absolute;
@@ -743,6 +745,10 @@ main {
   border-radius: 50%;
   top: 50%;
   border: 0.5rem solid var(--shade2);
+  z-index: 2;
+}
+#timeline .timelineContent .timelineTextBox:nth-child(2n+1) {
+  background: linear-gradient(to right, var(--shade4), transparent);
 }
 #timeline .timelineContent .timelineTextBox:nth-child(2n+1)::after {
   left: -2.5rem;
@@ -752,6 +758,9 @@ main {
   border-right: none;
   left: 0px;
 }
+#timeline .timelineContent .timelineTextBox:nth-child(2n) {
+  background: linear-gradient(to left, var(--shade3), transparent);
+}
 #timeline .timelineContent .timelineTextBox:nth-child(2n)::after {
   right: -2.5rem;
 }
@@ -759,6 +768,10 @@ main {
   right: 0px;
   border-radius: 0 6rem 6rem 0;
   border-left: none;
+}
+#timeline .timelineContent .timelineTextBox:nth-child(1) {
+  background: none;
+  background: linear-gradient(to top right, var(--shade4), transparent, transparent);
 }
 #timeline .timelineContent .timelineTextBox:nth-child(1) .border {
   border-top: none;
@@ -774,33 +787,35 @@ main {
   top: 0;
   left: -0.5rem;
 }
-#timeline .timelineContent .timelineTextBox .left {
+#timeline .timelineContent .timelineTextBox:last-child .border {
   border-bottom: none !important;
   overflow: visible;
-  border-radius: 0rem 6rem 0rem 0rem !important;
 }
-#timeline .timelineContent .timelineTextBox .left::after {
+#timeline .timelineContent .timelineTextBox:last-child .border::after {
   content: "";
   position: absolute;
   background: #000;
   width: 0.5rem;
   height: 50%;
   bottom: 0;
-  right: -0.5rem;
 }
-#timeline .timelineContent .timelineTextBox .right {
-  border-bottom: none !important;
-  overflow: visible;
+#timeline .timelineContent .timelineTextBox:last-child:nth-child(odd) {
+  background: linear-gradient(to bottom right, var(--shade4), transparent, transparent);
+}
+#timeline .timelineContent .timelineTextBox:last-child:nth-child(odd) .border {
   border-radius: 6rem 0rem 0rem 0 !important;
 }
-#timeline .timelineContent .timelineTextBox .right::after {
-  content: "";
-  position: absolute;
-  background: #000;
-  width: 0.5rem;
-  height: 50%;
-  bottom: 0;
+#timeline .timelineContent .timelineTextBox:last-child:nth-child(odd) .border::after {
   left: -0.5rem;
+}
+#timeline .timelineContent .timelineTextBox:last-child:nth-child(even) {
+  background: linear-gradient(to bottom left, var(--shade3), transparent, transparent);
+}
+#timeline .timelineContent .timelineTextBox:last-child:nth-child(even) .border {
+  border-radius: 0rem 6rem 0rem 0rem !important;
+}
+#timeline .timelineContent .timelineTextBox:last-child:nth-child(even) .border::after {
+  right: -0.5rem;
 }
 #timeline .timelineContent .timelineTextBox:nth-child(2) {
   top: -0.5rem;
