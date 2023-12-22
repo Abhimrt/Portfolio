@@ -1,0 +1,156 @@
+$borderRadius: 6rem;
+$borderWidth: .5rem;
+
+
+
+#timeline {
+    width: 80vw;
+    margin: auto;
+    color: white;
+    overflow: visible;
+
+    .timelineContent {
+        overflow: visible;
+
+        .timelineTextBox {
+            position: relative;
+            padding: 5rem;
+            overflow: visible;
+
+            .border {
+                position: absolute;
+                top: 0;
+                width: 50%;
+                height: 100%;
+                border: $borderWidth solid var(--shade2);
+            }
+
+            &:after {
+                position: absolute;
+                content: "1";
+                padding: 1rem;
+                width: 5rem;
+                height: 5rem;
+                background-color: var(--shade4);
+                transform: translateY(-50%);
+                @include center;
+                border-radius: 50%;
+                top: 50%;
+                border: .5rem solid var(--shade2);
+
+            }
+
+            // odd element
+            &:nth-child(2n+1) {
+
+                &::after {
+                    left: -2.5rem;
+                }
+
+                .border {
+                    border-radius: $borderRadius 0 0 $borderRadius;
+                    border-right: none;
+                    left: 0px;
+                }
+            }
+
+            //even element
+            &:nth-child(2n) {
+
+                &::after {
+                    right: -2.5rem;
+                }
+
+                .border {
+                    right: 0px;
+                    border-radius: 0 $borderRadius $borderRadius 0;
+                    border-left: none
+                }
+            }
+
+            // first element
+            &:nth-child(1) {
+                .border {
+                    border-top: none;
+                    overflow: visible;
+                    border-radius: 0rem 0rem 0rem $borderRadius;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        background: #000;
+                        width: $borderWidth;
+                        height: 50%;
+                        top: 0;
+                        left: -$borderWidth;
+                    }
+                }
+            }
+
+            // last content is on left side
+            .left {
+                border-bottom: none !important;
+                overflow: visible;
+                border-radius: 0rem $borderRadius 0rem 0rem !important;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    background: #000;
+                    width: $borderWidth;
+                    height: 50%;
+                    bottom: 0;
+                    right: -$borderWidth;
+                }
+            }
+
+            // last content is on left side
+            .right {
+                border-bottom: none !important;
+                overflow: visible;
+                border-radius: $borderRadius 0rem 0rem 0 !important;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    background: #000;
+                    width: $borderWidth;
+                    height: 50%;
+                    bottom: 0;
+                    left: -$borderWidth;
+                }
+            }
+
+            // to make element border seamless
+            @for $i from 1 through 10 {
+                &:nth-child(#{$i+1}) {
+                    top: -$i*$borderWidth;
+
+                    &::after {
+                        content: "#{$i+1}";
+                    }
+                }
+            }
+
+
+            // main text designing
+            h2 {
+                font-size: 5rem;
+                font-weight: 700;
+            }
+
+            .position,
+            .date {
+                font-size: 2rem;
+                color: gray;
+                font-style: italic;
+                letter-spacing: 1px;
+            }
+
+            p {
+                color: rgb(217, 216, 216);
+                font-weight: 400;
+            }
+        }
+    }
+}
