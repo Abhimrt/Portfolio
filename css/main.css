@@ -582,10 +582,9 @@ main {
   display: block;
   background-color: var(--shade3);
   border-radius: 3rem;
-  cursor: pointer;
   overflow: hidden;
   scroll-snap-align: center;
-  border: 5px var(--shade4) solid;
+  border: 0.5rem var(--shade4) solid;
 }
 #project .projectScrollWrapper .projectScrollWrapperInner > div .moreLink {
   width: 100%;
@@ -651,6 +650,7 @@ main {
   align-items: center;
   gap: 2rem;
   margin-top: 5rem;
+  flex-wrap: wrap;
 }
 #project .projectScrollWrapper .projectScrollWrapperInner > div .content .heading ul li {
   height: 3rem;
@@ -690,7 +690,7 @@ main {
 #project .projectScrollWrapper .projectScrollWrapperInner > div:nth-child(2n) {
   transform: translateY(5rem);
   background-color: var(--shade4);
-  border: 5px var(--shade3) solid;
+  border: 0.5rem var(--shade3) solid;
 }
 #project .projectScrollWrapper .projectScrollWrapperInner > div:nth-child(2n) .bar {
   background-color: orange;

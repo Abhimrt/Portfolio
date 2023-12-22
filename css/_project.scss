@@ -46,10 +46,9 @@
                 display: block;
                 background-color: var(--shade3);
                 border-radius: 3rem;
-                cursor: pointer;
                 overflow: hidden;
                 scroll-snap-align: center;
-                border: 5px var(--shade4) solid;
+                border: .5rem var(--shade4) solid;
 
 
 
@@ -126,6 +125,7 @@
                             align-items: center;
                             gap: 2rem;
                             margin-top: 5rem;
+                            flex-wrap: wrap;
 
                             li {
                                 height: 3rem;
@@ -177,7 +177,7 @@
                 &:nth-child(2n) {
                     transform: translateY(5rem);
                     background-color: var(--shade4);
-                    border: 5px var(--shade3) solid;
+                    border: .5rem var(--shade3) solid;
 
                     .bar {
                         background-color: orange;
