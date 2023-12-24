@@ -894,6 +894,91 @@ main {
   font-weight: 400;
 }
 
+/* timeline==================================== */
+#certificates {
+  width: 80vw;
+  margin: auto;
+  overflow: hidden;
+  margin-top: 10rem;
+}
+#certificates .scrollAnimation {
+  position: relative;
+  overflow: hidden;
+}
+#certificates .scrollAnimation:before, #certificates .scrollAnimation:after {
+  position: absolute;
+  top: 0;
+  width: 25rem;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+#certificates .scrollAnimation:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0), black);
+}
+#certificates .scrollAnimation:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), black);
+}
+#certificates .scrollAnimation .scrollAnimationContainer {
+  display: flex;
+  padding: 5rem 0;
+  transition: 0.3s all ease;
+}
+#certificates .scrollAnimation .scrollAnimationContainer[data-move=left] {
+  min-width: 1120rem;
+  animation: 30s slideLeft infinite linear;
+}
+#certificates .scrollAnimation .scrollAnimationContainer[data-move=right] {
+  min-width: 1920rem;
+  animation: 40s slideRight infinite linear;
+}
+#certificates .scrollAnimation .scrollAnimationContainer img {
+  max-width: 75rem;
+  border-radius: 2rem;
+  border: 0.5rem solid rgba(0, 0, 0, 0.315);
+  margin-right: 5rem;
+  cursor: pointer;
+  transition: 0.3s all ease;
+}
+#certificates .scrollAnimation .scrollAnimationContainer img:hover {
+  scale: 1.1;
+}
+#certificates .scrollAnimation .scrollAnimationContainer:hover {
+  animation-play-state: paused;
+}
+#certificates .content {
+  width: 100%;
+  color: white;
+}
+#certificates .content h2 {
+  font-size: 15rem;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-style: italic;
+  text-shadow: 0.5rem 0.5rem 0.5rem var(--shade1);
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes slideRight {
+  to {
+    transform: translateX(0);
+  }
+  from {
+    transform: translateX(-50%);
+  }
+}
 /* about==================================== */
 #about {
   width: 100vw;
@@ -1359,6 +1444,9 @@ main {
   }
   #timeline .timelineContent .timelineTextBox p {
     font-size: 6rem;
+  }
+  #certificates h2 {
+    font-size: 10rem !important;
   }
   #contact {
     height: 110vh;

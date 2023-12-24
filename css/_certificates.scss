@@ -1,0 +1,104 @@
+#certificates {
+    width: 80vw;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 10rem;
+
+    .scrollAnimation {
+        position: relative;
+        overflow: hidden;
+
+        &:before,
+        &:after {
+            position: absolute;
+            top: 0;
+            width: 25rem;
+            height: 100%;
+            content: "";
+            z-index: 2;
+        }
+
+        &:before {
+            left: 0;
+            background: linear-gradient(to left, rgba(0, 0, 0, 0), black);
+        }
+
+        &:after {
+            right: 0;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0), black);
+        }
+
+        .scrollAnimationContainer {
+            display: flex;
+            padding: 5rem 0;
+            transition: .3s all ease;
+
+            &[data-move="left"] {
+                min-width: calc(80rem * 7 * 2);
+                animation: 30s slideLeft infinite linear;
+            }
+
+            &[data-move="right"] {
+                min-width: calc(80rem * 12 * 2);
+                animation: 40s slideRight infinite linear;
+            }
+
+            img {
+                max-width: 75rem;
+                border-radius: 2rem;
+                border: .5rem solid rgba(0, 0, 0, 0.315);
+                margin-right: 5rem;
+                cursor: pointer;
+                transition: .3s all ease;
+
+                &:hover {
+                    scale: 1.1;
+                }
+            }
+
+            &:hover {
+                animation-play-state: paused;
+
+            }
+
+        }
+    }
+
+    .content {
+        width: 100%;
+        color: white;
+
+
+        h2 {
+            font-size: 15rem;
+            color: white;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 2px;
+            font-style: italic;
+            text-shadow: .5rem .5rem .5rem var(--shade1);
+        }
+    }
+}
+
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes slideRight {
+    to {
+        transform: translateX(0);
+    }
+
+    from {
+        transform: translateX(-50%);
+    }
+}
