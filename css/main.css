@@ -83,7 +83,7 @@ body {
 .button {
   padding: 2rem;
   font-size: 2.5rem;
-  background-color: #77bee7;
+  background-color: #77bee7 !important;
   color: #000;
   outline: none;
   border-radius: 3rem;
@@ -145,6 +145,7 @@ nav .link {
 }
 nav .link a {
   transition: 0.3s all ease;
+  text-transform: uppercase;
 }
 nav .link:hover a {
   transform: scale(1.25);
@@ -428,6 +429,7 @@ header {
   font-family: "Vujahday Script", cursive;
   overflow: hidden;
   text-shadow: 5px 5px 5px rgba(56, 56, 56, 0.8);
+  text-align: center;
 }
 
 #passion {
@@ -981,89 +983,52 @@ main {
 }
 /* about==================================== */
 #about {
-  width: 100vw;
+  width: calc(100vw - 10rem);
   height: 100vh;
   position: relative;
   color: white;
+  padding-top: 20rem;
+  margin-left: 10rem;
 }
-#about .aboutback {
-  width: 100%;
-  height: 100%;
+#about .aboutUp {
+  overflow: visible;
+  position: relative;
+  border-radius: 0 0 50% 50%;
+  position: relative;
+}
+#about .aboutUp img {
   position: absolute;
-  bottom: 0;
+  margin: auto;
+  right: 0;
+  left: 0;
+  bottom: -15rem;
+  width: 40rem;
+  border-radius: 50%;
+  border: 2rem solid black;
+  background-color: black;
+}
+#about .aboutDown {
+  background-color: var(--shade3);
+  border-radius: 30rem 30rem 0 0;
+  padding: 5rem;
+  padding-top: 15rem;
   overflow: hidden;
-  background: linear-gradient(rgba(0, 0, 0, 0.8) 2%, transparent 85%, rgba(0, 0, 0, 0.6), rgb(0, 0, 0)), url("../images/about-back.jpg");
-  background-position: center;
-  background-size: cover;
 }
-#about .abouttext {
-  position: absolute;
-  top: 0;
-  left: 10vw;
-  max-width: 80vw;
-  width: 40vw;
-  height: 100vh;
-  z-index: 999;
+#about .aboutDown h2 {
+  font-size: 10rem;
+  font-weight: 600;
+  text-align: center;
 }
-#about .abouttext h1 {
-  font-size: 4rem;
-  margin-bottom: 1rem;
-  color: rgb(54, 116, 209);
+#about .aboutDown p {
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.619);
+  text-align: justify;
 }
-#about .abouttext p {
-  font-size: 3rem;
-}
-#about .abouttext a {
-  color: rgb(92, 151, 240);
-  text-decoration: none;
-  display: inline;
+#about .aboutDown a {
+  color: orange;
 }
 
 /* contact==================================== */
-#post {
-  width: 100vw;
-  height: 110vh;
-  background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.6), transparent 50%, rgb(0, 0, 0)), url("../images/post.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-#post button {
-  position: absolute;
-  right: 5rem;
-  bottom: 3rem;
-}
-#post .posts {
-  width: 80vw;
-  height: 80vh;
-  margin: 2rem;
-  flex-direction: row !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  overflow: visible;
-  justify-content: space-evenly !important;
-}
-#post .posts iframe {
-  width: 50rem;
-  height: inherit;
-  border-radius: 2rem;
-  box-shadow: 5px 5px 40px black;
-  transition: 0.3s all ease;
-  transform: scale(0.9);
-  position: relative;
-}
-#post .posts iframe:hover {
-  transform: scale(1);
-}
-#post .posts .mid {
-  transform: scale(0.95);
-}
-#post .posts .mid:hover {
-  transform: scale(1.05);
-}
-
 /* contact==================================== */
 #contact {
   flex-direction: row;
@@ -1071,7 +1036,7 @@ main {
   height: 100vh;
   font-size: 4rem;
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6), transparent 100%, rgba(0, 0, 0, 0.8)), url("../images/contact-back.jpg") center no-repeat;
+  background-color: var(--shade3);
   background-size: cover;
   justify-content: space-evenly !important;
 }
@@ -1154,7 +1119,8 @@ main {
   text-align: left;
   margin-top: 30px;
 }
-#contact .container label, #contact .container input {
+#contact .container label,
+#contact .container input {
   display: block;
   width: 100%;
   padding: 0;
@@ -1175,10 +1141,12 @@ main {
 #contact .container input::-moz-placeholder, #contact .container textarea::-moz-placeholder {
   color: rgb(210, 210, 210);
 }
-#contact .container input::placeholder, #contact .container textarea::placeholder {
+#contact .container input::placeholder,
+#contact .container textarea::placeholder {
   color: rgb(210, 210, 210);
 }
-#contact .container input, #contact .container textarea {
+#contact .container input,
+#contact .container textarea {
   width: 100%;
   color: white;
   background: #6e6e6e;
@@ -1502,25 +1470,29 @@ main {
   }
   #about {
     text-shadow: 1px 3px 5px black;
+    width: 100vw;
+    margin: auto;
   }
-  #about .aboutback {
-    background-position: center;
+  #about .aboutUp {
+    height: 20%;
   }
-  #about .abouttext {
-    left: 0%;
-    right: 0;
-    margin: 0 auto;
-    width: 80vw;
+  #about .aboutUp img {
+    width: 80rem !important;
+    bottom: -25rem;
   }
-  #about .abouttext h1 {
-    font-size: 8rem;
-    margin-bottom: 3rem;
+  #about .aboutDown {
+    height: 80%;
+    padding: 18rem;
+    padding-top: 25rem;
   }
-  #about .abouttext p {
-    font-size: 6rem;
+  #about .aboutDown h2 {
+    font-size: 15rem;
   }
-  #about .abouttext h2 {
-    font-size: 4rem;
+  #about .aboutDown p {
+    font-size: 5rem;
+  }
+  #about .aboutDown h3 {
+    font-size: 7rem;
   }
   .model1,
   .model2 {

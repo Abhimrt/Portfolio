@@ -1,42 +1,58 @@
-#about{
-    width: 100vw;
-    height:100vh;
+#about {
+    width: calc(100vw - 10rem);
+    height: 100vh;
     position: relative;
     color: white;
-    
+    padding-top: 20rem;
+    margin-left: 10rem;
 
-    .aboutback{
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        bottom: 0;
+    .aboutUp {
+        overflow: visible;
+        position: relative;
+        // background-color: var(--shade3);
+        border-radius: 0 0 50% 50%;
+        position: relative;
+
+
+
+        img {
+            position: absolute;
+            margin: auto;
+            right: 0;
+            left: 0;
+            bottom: -15rem;
+            width: 40rem;
+            border-radius: 50%;
+            // box-shadow: .5rem .5rem 2rem black;
+            border: 2rem solid black;
+            background-color: black;
+        }
+    }
+
+    .aboutDown {
+        background-color: var(--shade3);
+        border-radius: 30rem 30rem 0 0;
+        padding: 5rem;
+        padding-top: 15rem;
         overflow: hidden;
-        background: linear-gradient(rgba(0, 0, 0, 0.8) 2%,transparent 85%,rgba(0, 0, 0, .6),rgba(0, 0, 0, 1) ) ,url("../images/about-back.jpg")  ;
-        background-position: center;
-        background-size: cover;
+
+        h2 {
+            font-size: 10rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        p {
+            font-size: 2.5rem;
+            color: rgba(255, 255, 255, 0.619);
+            text-align: justify;
+        }
+
+        a {
+            color: orange;
+        }
+
     }
 
-    .abouttext{
-        position: absolute;
-        top: 0;
-        left: 10vw;
-       max-width: 80vw;
-       width: 40vw;
-       height: 100vh;
-       z-index: 999;
-       h1{
-           font-size: 4rem;
-           margin-bottom: 1rem;
-           color: rgb(54, 116, 209);
-       }
-       p{
-           font-size: 3rem;
-       }
 
-       a{
-           color: rgb(92, 151, 240);
-           text-decoration: none;
-           display: inline ;
-       }
-    }
 }

@@ -4,15 +4,17 @@ header {
   height: 100vh;
   overflow: hidden;
 }
+
 .header-bc {
   width: 110vw;
   height: 101vh;
-  background-color: rgb(0,1,3);
+  background-color: rgb(0, 1, 3);
   background: linear-gradient(transparent 80%, black),
-    url("../images/header-bc.webp")  center center;
+    url("../images/header-bc.webp") center center;
   background-size: 100% 110%;
   filter: blur(1px);
 }
+
 .header-strip {
   width: 120px;
   height: 100vh;
@@ -23,12 +25,12 @@ header {
   z-index: 9999;
   transition: all .6s ease !important;
   overflow-x: visible;
-  border-radius: 54px 0 0 54px ;
+  border-radius: 54px 0 0 54px;
 
 
-    
-  
-  &::before{
+
+
+  &::before {
     content: "";
     width: 30px;
     height: 140px;
@@ -37,17 +39,17 @@ header {
     transform: translateY(-50%);
     left: -10px;
     z-index: 99999;
-    border-radius: 80px  ;
+    border-radius: 80px;
     background-color: #4158D0;
     background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
   }
 
-  &:hover{
+  &:hover {
     right: 0;
     background: transparent;
   }
 
-  .strip-dots{
+  .strip-dots {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -58,8 +60,8 @@ header {
     cursor: pointer;
   }
 
-  a{
-    margin: 12px ;
+  a {
+    margin: 12px;
     margin-left: 50px;
     width: 8rem;
     aspect-ratio: 1;
@@ -69,91 +71,107 @@ header {
     cursor: pointer;
     text-decoration: none;
     @include center;
-    transition:  .3s all ease;
+    transition: .3s all ease;
     box-shadow: 1px 1px 5px black;
     border-radius: 13px;
-background-color: linear-gradient(315deg, #cacaca, #f0f0f0);
-box-shadow:  -5px -5px 10px #5a5a5a,
-             5px 5px 10px #ffffff;
-   
-    
-    &:nth-child(2){
+    background-color: linear-gradient(315deg, #cacaca, #f0f0f0);
+    box-shadow: -5px -5px 10px #5a5a5a,
+      5px 5px 10px #ffffff;
+
+
+    &:nth-child(2) {
       color: #4267B2;
     }
-    &:nth-child(3){
+
+    &:nth-child(3) {
       color: #0E76A8;
     }
-    &:nth-child(4){
+
+    &:nth-child(4) {
       color: #C13584;
     }
-    &:nth-child(5){
+
+    &:nth-child(5) {
       color: #171515;
     }
-    &:nth-child(6){
-      color: rgb(1,169,132);
+
+    &:nth-child(6) {
+      color: rgb(1, 169, 132);
     }
-    &:nth-child(7){
+
+    &:nth-child(7) {
       color: gray;
     }
-    &:nth-child(8){
-      color: rgb(48,200,102);
+
+    &:nth-child(8) {
+      color: rgb(48, 200, 102);
     }
-    &:nth-child(9){
+
+    &:nth-child(9) {
       color: black;
     }
-    &:nth-child(10){
-      color: rgb(48,60,55);
+
+    &:nth-child(10) {
+      color: rgb(48, 60, 55);
     }
-    
-    &:hover{
+
+    &:hover {
       transform: scale(1.1);
       font-size: 5rem;
       color: white;
-      
-      &:nth-child(2){
+
+      &:nth-child(2) {
         background-color: #4267B2;
         box-shadow: 1px 1px 20px #4267B2,
-                    -1px -1px 20px #4267B2;
+          -1px -1px 20px #4267B2;
       }
-      &:nth-child(3){
+
+      &:nth-child(3) {
         background-color: #0E76A8;
         box-shadow: 1px 1px 20px #0E76A8,
-        -1px -1px 20px #0E76A8;
+          -1px -1px 20px #0E76A8;
       }
-      &:nth-child(4){
+
+      &:nth-child(4) {
         background-color: #C13584;
         box-shadow: 1px 1px 20px #C13584,
-        -1px -1px 20px #C13584  ;
+          -1px -1px 20px #C13584;
       }
-      &:nth-child(5){
+
+      &:nth-child(5) {
         background-color: #171515;
         box-shadow: 1px 1px 20px #171515,
-        -1px -1px 20px #171515;
+          -1px -1px 20px #171515;
       }
-      &:nth-child(7){
+
+      &:nth-child(7) {
         background-color: gray;
         box-shadow: 1px 1px 20px gray,
-        -1px -1px 20px gray;
+          -1px -1px 20px gray;
       }
-      &:nth-child(6){
-        background-color: rgb(1,169,132);
-        box-shadow: 1px 1px 20px rgb(1,169,132),
-        -1px -1px 20px rgb(1,169,132);
+
+      &:nth-child(6) {
+        background-color: rgb(1, 169, 132);
+        box-shadow: 1px 1px 20px rgb(1, 169, 132),
+          -1px -1px 20px rgb(1, 169, 132);
       }
-      &:nth-child(8){
-        background-color: rgb(1,169,132);
-        box-shadow: 1px 1px 20px rgb(1,169,132),
-        -1px -1px 20px rgb(1,169,132);
+
+      &:nth-child(8) {
+        background-color: rgb(1, 169, 132);
+        box-shadow: 1px 1px 20px rgb(1, 169, 132),
+          -1px -1px 20px rgb(1, 169, 132);
       }
-      &:nth-child(9){
+
+      &:nth-child(9) {
         background-color: black;
         box-shadow: 1px 1px 20px black,
-        -1px -1px 20px black;
+          -1px -1px 20px black;
       }
-      &:nth-child(10){
-        background-color: rgb(48,60,55);
-        box-shadow: 1px 1px 20px rgb(48,60,55),
-        -1px -1px 20px rgb(48,60,55);
+
+      &:nth-child(10) {
+        background-color: rgb(48, 60, 55);
+        box-shadow: 1px 1px 20px rgb(48, 60, 55),
+          -1px -1px 20px rgb(48, 60, 55);
       }
     }
   }
@@ -169,6 +187,7 @@ box-shadow:  -5px -5px 10px #5a5a5a,
   transform: scale(0);
   transition: transform .6s ease !important;
 }
+
 .header-text h1 {
   font-size: 12rem;
   letter-spacing: 1rem;
@@ -180,6 +199,7 @@ box-shadow:  -5px -5px 10px #5a5a5a,
   text-shadow: 6px 6px 6px rgba(45, 45, 45, 0.8);
   padding: 2rem;
 }
+
 .header-text h2 {
   font-size: 6rem;
   text-align: left;
@@ -188,7 +208,9 @@ box-shadow:  -5px -5px 10px #5a5a5a,
   font-family: "Vujahday Script", cursive;
   overflow: hidden;
   text-shadow: 5px 5px 5px rgba(56, 56, 56, 0.8);
+  text-align: center;
 }
+
 #passion {
   color: var(--shade3);
 }

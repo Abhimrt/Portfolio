@@ -389,30 +389,37 @@
 
   #about {
     text-shadow: 1px 3px 5px black;
+    width: 100vw;
+    margin: auto;
 
-    .aboutback {
-      background-position: center;
+    .aboutUp {
+      height: 20%;
+
+      img {
+        width: 80rem !important;
+        bottom: -25rem;
+      }
     }
 
-    .abouttext {
-      left: 0%;
-      right: 0;
-      margin: 0 auto;
-      width: 80vw;
+    .aboutDown {
+      height: 80%;
+      padding: 18rem;
+      padding-top: 25rem;
 
-      h1 {
-        font-size: 8rem;
-        margin-bottom: 3rem;
+      h2 {
+        font-size: 15rem;
       }
 
       p {
-        font-size: 6rem;
+        font-size: 5rem;
       }
 
-      h2 {
-        font-size: 4rem;
+      h3 {
+        font-size: 7rem;
       }
     }
+
+
   }
 
   .model1,

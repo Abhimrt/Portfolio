@@ -1,4 +1,5 @@
-$curve-width:3rem;
+$curve-width: 3rem;
+
 nav {
   height: 100vh;
   width: 10rem;
@@ -7,7 +8,7 @@ nav {
   background-color: #000;
   z-index: 9999999 !important;
   transition: .4s all ease;
-  
+
   .nav {
     height: 100vh;
     width: 33rem;
@@ -16,7 +17,7 @@ nav {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     padding: 15rem 0;
   }
-  
+
   .link {
     position: relative;
     display: flex;
@@ -26,21 +27,22 @@ nav {
     border-radius: 4rem 0 0 4rem;
     justify-content: start;
     transition: .4s all ease;
-    
-    a{
+
+    a {
       transition: .3s all ease;
+      text-transform: uppercase;
     }
-    
-    &:hover a{
+
+    &:hover a {
       transform: scale(1.25);
     }
   }
-  
+
   .active {
     background-color: black;
     position: relative;
     overflow: visible;
-    
+
     b:nth-child(1) {
       position: absolute;
       width: 6rem;
@@ -49,6 +51,7 @@ nav {
       top: -3rem;
       transition: .4s all ease;
     }
+
     b:nth-child(1)::after {
       content: "";
       position: absolute;
@@ -58,29 +61,32 @@ nav {
       border-bottom-right-radius: 2rem;
       background-color: rgb(92, 151, 240);
     }
+
     b:nth-child(3) {
       position: absolute;
       width: 6rem;
       height: 3rem;
       background-color: black;
       bottom: -3rem;
-      transition:.4s all ease;
+      transition: .4s all ease;
     }
-    b:nth-child(3):after {
-        content: "";
-        position: absolute;
-        top: 0rem;
-        width: 100%;
-        height: 3rem;
-        border-top-right-radius: 2rem;
-        background-color: rgb(92, 151, 240);
-      }
-    a{
-        color: white;
 
-        i{
-          color: white;
-        }
+    b:nth-child(3):after {
+      content: "";
+      position: absolute;
+      top: 0rem;
+      width: 100%;
+      height: 3rem;
+      border-top-right-radius: 2rem;
+      background-color: rgb(92, 151, 240);
+    }
+
+    a {
+      color: white;
+
+      i {
+        color: white;
+      }
     }
   }
 
@@ -95,39 +101,44 @@ nav {
     justify-content: center;
     z-index: 11;
 
-    i{
-        font-size: 3rem;
-        padding-right: 2rem;
-        color: black;
-        display: block;
+    i {
+      font-size: 3rem;
+      padding-right: 2rem;
+      color: black;
+      display: block;
     }
-    h2{
+
+    h2 {
       display: none;
     }
   }
 }
 
 
-nav:hover{
-    width: 33rem;
-    .link{
-        margin-left: 4rem;
-        padding-left: 4rem;
-        justify-content: none;
+nav:hover {
+  width: 33rem;
 
+  .link {
+    margin-left: 4rem;
+    padding-left: 4rem;
+    justify-content: none;
+
+  }
+
+  .active {
+
+    b:nth-child(1),
+    b:nth-child(3) {
+      width: 25rem;
     }
-    .active{
-        b:nth-child(1),
-        b:nth-child(3){
-            width: 25rem;
-        }
+  }
+
+  a {
+    text-align: none;
+
+    // 
+    h2 {
+      display: block;
     }
-    a{
-        text-align: none;
-        // 
-        h2{
-            display: block;
-        }
-    }
+  }
 }
-
