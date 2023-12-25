@@ -5,6 +5,7 @@
     color: white;
     padding-top: 20rem;
     margin-left: 10rem;
+    overflow: hidden;
 
     .aboutUp {
         overflow: visible;
@@ -37,19 +38,23 @@
         overflow: hidden;
 
         h2 {
-            font-size: 10rem;
+            font-size: 5dvh;
             font-weight: 600;
             text-align: center;
         }
 
         p {
-            font-size: 2.5rem;
+            font-size: 3dvh;
             color: rgba(255, 255, 255, 0.619);
             text-align: justify;
         }
 
         a {
             color: orange;
+        }
+
+        h3 {
+            font-size: 3.2dvh;
         }
 
     }

@@ -17,6 +17,11 @@
     font-size: 35% !important;
   }
 
+  .aboutDown {
+    padding: 8rem !important;
+    padding-top: 17rem !important;
+  }
+
 
 }
 
@@ -25,6 +30,20 @@
   html {
     font-size: 30% !important;
     ;
+  }
+
+  #about {
+    .aboutUp {
+      img {
+        width: 60rem;
+        bottom: -15rem;
+      }
+    }
+  }
+
+  .aboutDown {
+    padding: 10rem !important;
+    padding-top: 17rem !important;
   }
 
 }
@@ -396,7 +415,7 @@
       height: 20%;
 
       img {
-        width: 80rem !important;
+        width: 80rem;
         bottom: -25rem;
       }
     }
